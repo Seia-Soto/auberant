@@ -1,0 +1,91 @@
+exports.run = (client, message, args) => {
+  const translate = require('google-translate-api')
+  const braille = require('braille')
+
+  var translateFor = args.slice(1).join(" ")
+
+  if (!translateFor) {
+    message.channel.send({embed: {
+      color: 3447003,
+      title: 'translate',
+      description: 'Translate the string given. First argument is country-code and second argument is string to translate.',
+      timestamp: new Date(),
+      footer: {
+        icon_url: 'https://cdn.discordapp.com/app-icons/406881830185467915/aee5e3748f34a0e6d7fd7c70ebfacbf0.png',
+        text: '© auberant 2018, all rights reserved'
+      }
+    }
+    })
+  } else {
+    if (args[0] === 'braille') {
+      var messageToBraille = args.slice(1).join(" ")
+      var messageToBrailleResult = braille.toBraille(`${messageToBraille}`)
+      message.channel.send({embed: {
+        color: 3447003,
+        title: 'translate',
+        description: `**From __English__ To __Braille__:** ${messageToBrailleResult}`,
+        timestamp: new Date(),
+        footer: {
+          icon_url: 'https://cdn.discordapp.com/app-icons/406881830185467915/aee5e3748f34a0e6d7fd7c70ebfacbf0.png',
+          text: '© auberant 2018, all rights reserved'
+        }
+      }
+      })
+      return
+    } else if (args[0] === 'text') {
+      var brailleToText = args.slice(1).join(" ")
+      var brailleToTextResult = braille.toText(`${brailleToText}`)
+      message.channel.send({embed: {
+        color: 3447003,
+        title: 'translate',
+        description: `**From __Braille__ to __English__:** ${brailleToTextResult}`,
+        timestamp: new Date(),
+        footer: {
+          icon_url: 'https://cdn.discordapp.com/app-icons/406881830185467915/aee5e3748f34a0e6d7fd7c70ebfacbf0.png',
+          text: '© auberant 2018, all rights reserved'
+        }
+      }
+      })
+    }
+    translate(`${translateFor}`, {to: `${args[0]}`}).then(res => {
+      message.channel.send({embed: {
+        color: 3447003,
+        title: 'translate',
+        description: `**From __${res.from.language.iso}__ To __${args[0]}__:** ${res.text}`,
+        timestamp: new Date(),
+        footer: {
+          icon_url: 'https://cdn.discordapp.com/app-icons/406881830185467915/aee5e3748f34a0e6d7fd7c70ebfacbf0.png',
+          text: '© auberant 2018, all rights reserved'
+        }
+      }
+      })
+      return
+    }).catch(error => {
+      message.channel.send({embed: {
+        color: 3447003,
+        title: 'Error',
+        description: `${error}`,
+        timestamp: new Date(),
+        footer: {
+          icon_url: 'https://cdn.discordapp.com/app-icons/406881830185467915/aee5e3748f34a0e6d7fd7c70ebfacbf0.png',
+          text: '© auberant 2018, all rights reserved'
+        }
+      }
+      })
+    })
+  }
+  return
+}
+
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: ['tr'],
+  permLevel: 0
+}
+
+exports.help = {
+  name: 'translate',
+  description: 'Translate in Discord anytime when you want.',
+  usage: 'translate <languagecode> <string>'
+}
