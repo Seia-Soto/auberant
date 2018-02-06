@@ -11,6 +11,7 @@
     "discord.js": "^11.3.0",
     "fs": "0.0.1-security",
     "google-translate-api": "^2.3.0",
+    "mysql": "^2.15.0",
     "opusscript": "0.0.6",
     "sqlite3": "^3.1.13",
     "ytdl-core": "^0.20.0"

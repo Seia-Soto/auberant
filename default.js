@@ -46,10 +46,10 @@ client.reload = command => {
 client.elevation = (message, guild) => {
   let permlvl = 0
   let mod_role = message.guild.roles.find('name', `${int.moderator_rolename}`)
-  if (mod_role && message.member.roles.has(mod_role.id)) permlvl = 1
+  if (mod_role && message.member.roles.has(mod_role.id)) permlvl = 2
   let admin_role = message.guild.roles.find('name', `${int.administrator_rolename}`)
-  if (admin_role && message.member.roles.has(admin_role.id)) permlvl = 2
-  if (message.author.id === int.ownerid) permlvl = 3
+  if (admin_role && message.member.roles.has(admin_role.id)) permlvl = 3
+  if (message.author.id === int.ownerid) permlvl = 4
   return permlvl
 }
 
