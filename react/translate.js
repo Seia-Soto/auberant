@@ -8,12 +8,7 @@ exports.run = (client, message, args) => {
     message.channel.send({embed: {
       color: 3447003,
       title: 'translate',
-      description: 'Translate the string given. First argument is country-code and second argument is string to translate.',
-      timestamp: new Date(),
-      footer: {
-        icon_url: 'https://cdn.discordapp.com/app-icons/406881830185467915/aee5e3748f34a0e6d7fd7c70ebfacbf0.png',
-        text: '© auberant 2018, all rights reserved'
-      }
+      description: 'Translate the string given. First argument is country-code and second argument is string to translate.'
     }
     })
   } else {
@@ -23,12 +18,7 @@ exports.run = (client, message, args) => {
       message.channel.send({embed: {
         color: 3447003,
         title: 'translate',
-        description: `**From __English__ To __Braille__:** ${messageToBrailleResult}`,
-        timestamp: new Date(),
-        footer: {
-          icon_url: 'https://cdn.discordapp.com/app-icons/406881830185467915/aee5e3748f34a0e6d7fd7c70ebfacbf0.png',
-          text: '© auberant 2018, all rights reserved'
-        }
+        description: `**From __English__ To __Braille__:** ${messageToBrailleResult}`
       }
       })
       return
@@ -38,12 +28,7 @@ exports.run = (client, message, args) => {
       message.channel.send({embed: {
         color: 3447003,
         title: 'translate',
-        description: `**From __Braille__ to __English__:** ${brailleToTextResult}`,
-        timestamp: new Date(),
-        footer: {
-          icon_url: 'https://cdn.discordapp.com/app-icons/406881830185467915/aee5e3748f34a0e6d7fd7c70ebfacbf0.png',
-          text: '© auberant 2018, all rights reserved'
-        }
+        description: `**From __Braille__ to __English__:** ${brailleToTextResult}`
       }
       })
     }
@@ -51,12 +36,7 @@ exports.run = (client, message, args) => {
       message.channel.send({embed: {
         color: 3447003,
         title: 'translate',
-        description: `**From __${res.from.language.iso}__ To __${args[0]}__:** ${res.text}`,
-        timestamp: new Date(),
-        footer: {
-          icon_url: 'https://cdn.discordapp.com/app-icons/406881830185467915/aee5e3748f34a0e6d7fd7c70ebfacbf0.png',
-          text: '© auberant 2018, all rights reserved'
-        }
+        description: `**From __${res.from.language.iso}__ To __${args[0]}__:** ${res.text}`
       }
       })
       return
@@ -65,11 +45,7 @@ exports.run = (client, message, args) => {
         color: 3447003,
         title: 'Error',
         description: `${error}`,
-        timestamp: new Date(),
-        footer: {
-          icon_url: 'https://cdn.discordapp.com/app-icons/406881830185467915/aee5e3748f34a0e6d7fd7c70ebfacbf0.png',
-          text: '© auberant 2018, all rights reserved'
-        }
+        timestamp: new Date()
       }
       })
     })

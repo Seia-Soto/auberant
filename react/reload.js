@@ -10,11 +10,7 @@ exports.run = (client, message, args) => {
       color: 3447003,
       title: 'reload',
       description: `:eyes: Searching **${args[0]}.js** from server..`,
-      timestamp: new Date(),
-      footer: {
-        icon_url: 'https://cdn.discordapp.com/app-icons/406881830185467915/aee5e3748f34a0e6d7fd7c70ebfacbf0.png',
-        text: '© auberant 2018, all rights reserved'
-      }
+      timestamp: new Date()
     }
     })
   } else {
