@@ -17,7 +17,7 @@ exports.run = (client, message, args) => {
 
 exports.conf = {
   enabled: true,
-  guildOnly: true,
+  guildOnly: false,
   aliases: ['pong', '핑', '퐁'],
   permLevel: 0
 }
