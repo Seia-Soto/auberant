@@ -31,7 +31,7 @@ exports.conf = {
 }
 
 exports.help = {
-  name: '-template',
+  name: 'template',
   description: 'Displays settings',
-  usage: '-template'
+  usage: 'template'
 }
