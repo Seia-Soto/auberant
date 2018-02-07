@@ -1,5 +1,10 @@
 const int = require('../int.json')
 module.exports = message => {
+  if (message.content.includes('바보') || message.content.includes('바부')) {
+    message.delete()
+    return
+  }
+
   let client = message.client
   if (message.author.bot) return
   if (!message.content.startsWith(int.prefix)) return
@@ -18,4 +23,4 @@ module.exports = message => {
     if (perms < rct.conf.permLevel) return
     rct.run(client, message, args, perms)
   }
-};
+}
