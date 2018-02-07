@@ -3,7 +3,7 @@ exports.run = (client, message, args) => {
   const embed = new Discord.RichEmbed()
     .setTitle('load')
     .setColor(3447003)
-    .setImage('https://cdn.discordapp.com/attachments/386774698362404864/410862314305355803/load.gif')
+    .setThumbnail('https://cdn.discordapp.com/attachments/386774698362404864/410862314305355803/load.gif')
   message.channel.send({embed}).then((load) => {
     setTimeout(() => {
       load.edit({embed: {
@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
         description: 'All settings are reloaded!'
       }
       })
-    }, 4500)
+    }, 11000)
   .catch(console.error)
   })
 }
