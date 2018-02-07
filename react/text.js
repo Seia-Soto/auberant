@@ -3,13 +3,15 @@ exports.run = (client, message, args) => {
     message.channel.send({embed: {
       color: 3447003,
       title: 'text',
-      description: `Send ASCII text. Argument is string.`
+      description: `Send ASCii text. Argument is string.`
     }
     })
     return
   }
   const figlet = require('figlet')
-  figlet.text(`${args[0]}`, (error, data) => {
+
+  var messageToASCii = args.slice(0).join(' ')
+  figlet.text(`${messageToASCii}`, (error, data) => {
     if (error) {
       console.error(error)
       message.channel.send({embed: {
@@ -22,7 +24,6 @@ exports.run = (client, message, args) => {
     }
     message.channel.send('```' + data + '```')
   })
-
 }
 
 exports.conf = {
