@@ -14,7 +14,8 @@ exports.run = (client, message, args) => {
       })
     }, 4500)
   .catch(console.error)
-)}
+  )}
+}
 
 exports.conf = {
   enabled: true,
