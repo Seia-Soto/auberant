@@ -1,150 +1,25 @@
 exports.run = (client, message, args) => {
-  message.channel.send({embed: {
-    color: 3447003,
-    title: 'load',
-    description: 'Reading some files...'
-  }
-  }).then((load) => {
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading\n [.....................]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading.\n [#....................]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading..\n [##...................]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading...\n [###..................]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading.\n [####.................]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading..\n [#####................]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading...\n [######...............]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading.\n [#######..............]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading..\n [########.............]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading...\n [#########............]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading.\n [##########...........]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading..\n [###########..........]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading...\n [############.........]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading.\n [#############........]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading..\n [###############......]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading...\n [################.....]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading.\n [#################....]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading..\n [##################...]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading...\n [###################..]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading.\n [####################.]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Loading..\n [#####################]`
-    }
-    })
-    load.edit({embed: {
-      color: 3447003,
-      title: 'load',
-      description: `Done!`
-    }
-    })
-  })
+  const embed = new Discord.RichEmbed()
+    .setTitle('load')
+    .setColor(3447003)
+    .setImage('../src/load.gif')
+    .setHeight(50)
+  message.channel.send({embed}).then((load) => {
+    setTimeout(() => {
+      load.edit({embed: {
+        color: 3447003,
+        title: 'load',
+        description: 'All settings are reloaded!'
+      }
+      })
+    }, 4500)
   .catch(console.error)
 }
 
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ['loading', '로딩', '로드'],
+  aliases: [],
   permLevel: 0
 }
 
