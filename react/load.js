@@ -8,121 +8,127 @@ exports.run = (client, message, args) => {
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading.\n**5%** [#....................]`
+      description: `Loading\n [.....................]`
     }
     })
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading..\n**10%** [##...................]`
+      description: `Loading.\n [#....................]`
     }
     })
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading...\n**15%** [###..................]`
+      description: `Loading..\n [##...................]`
     }
     })
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading.\n**20%** [####.................]`
+      description: `Loading...\n [###..................]`
     }
     })
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading..\n**25%** [#####................]`
+      description: `Loading.\n [####.................]`
     }
     })
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading...\n**30%** [######...............]`
+      description: `Loading..\n [#####................]`
     }
     })
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading.\n**35%** [#######..............]`
+      description: `Loading...\n [######...............]`
     }
     })
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading..\n**40%** [########.............]`
+      description: `Loading.\n [#######..............]`
     }
     })
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading...\n**45%** [#########............]`
+      description: `Loading..\n [########.............]`
     }
     })
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading.\n**50%** [##########...........]`
+      description: `Loading...\n [#########............]`
     }
     })
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading..\n**55%** [###########..........]`
+      description: `Loading.\n [##########...........]`
     }
     })
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading...\n**60%** [############.........]`
+      description: `Loading..\n [###########..........]`
     }
     })
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading.\n**65%** [#############........]`
+      description: `Loading...\n [############.........]`
     }
     })
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading..\n**70%** [###############......]`
+      description: `Loading.\n [#############........]`
     }
     })
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading...\n**75%** [################.....]`
+      description: `Loading..\n [###############......]`
     }
     })
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading.\n**80%** [#################....]`
+      description: `Loading...\n [################.....]`
     }
     })
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading..\n**85%** [##################...]`
+      description: `Loading.\n [#################....]`
     }
     })
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading...\n**90%** [###################..]`
+      description: `Loading..\n [##################...]`
     }
     })
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading.\n**95%** [####################.]`
+      description: `Loading...\n [###################..]`
     }
     })
     load.edit({embed: {
       color: 3447003,
       title: 'load',
-      description: `Loading..\n**100%** [#####################]`
+      description: `Loading.\n [####################.]`
+    }
+    })
+    load.edit({embed: {
+      color: 3447003,
+      title: 'load',
+      description: `Loading..\n [#####################]`
     }
     })
     load.edit({embed: {
