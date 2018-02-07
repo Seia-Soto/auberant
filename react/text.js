@@ -1,17 +1,9 @@
 exports.run = (client, message, args) => {
-  if (!args[0] || !args[1]) {
+  if (!args[0]) {
     message.channel.send({embed: {
       color: 3447003,
-      title: 'Text',
-      description: `Send ASCII text (font: ANSI Shadow). Argument is string.`
-    }
-    })
-    return
-  } else if (args[0] == 'font-list') {
-    message.channel.send({embed: {
-      color: 3447003,
-      title: 'Text',
-      description: `These are list of fonts!\n\n`
+      title: 'text',
+      description: `Send ASCII text. Argument is string.`
     }
     })
     return
