@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
     title: 'post',
     description: `${messageToNotice}`
   }
-  }))
+  })))
 }
 
 exports.conf = {
