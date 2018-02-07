@@ -4,7 +4,6 @@ exports.run = (client, message, args) => {
     .setTitle('load')
     .setColor(3447003)
     .setImage('../src/load.gif')
-    .setHeight(50)
   message.channel.send({embed}).then((load) => {
     setTimeout(() => {
       load.edit({embed: {
