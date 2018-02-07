@@ -17,11 +17,7 @@ exports.run = (client, message, args) => {
     return
   }
   const figlet = require('figlet')
-  figlet.text(`${args[1]}`, {
-    font: 'Doh',
-    horizontalLayout: 'default',
-    verticalLayout: 'default'
-  } (error, data) => {
+  figlet.text(`${args[0]}`, (error, data) => {
     if (error) {
       console.error(error)
       message.channel.send({embed: {
