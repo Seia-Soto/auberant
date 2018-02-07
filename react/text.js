@@ -18,7 +18,7 @@ exports.run = (client, message, args) => {
   }
   const figlet = require('figlet')
   figlet.text(`${args[1]}`, {
-    font: 'ANSI Shadow',
+    font: 'Doh',
     horizontalLayout: 'default',
     verticalLayout: 'default'
   } (error, data) => {
