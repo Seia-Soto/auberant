@@ -1,4 +1,5 @@
 exports.run = (client, message, args) => {
+  const Discord = require('discord.js')
   const embed = new Discord.RichEmbed()
     .setTitle('load')
     .setColor(3447003)
