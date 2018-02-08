@@ -9,44 +9,39 @@ exports.run = (client, message, args) => {
       color: 3447003,
       title: 'translate',
       description: 'Translate the string given. First argument is country-code and second argument is string to translate.'
-    }
-    })
+    }})
   } else {
-    if (args[0] === 'braille') {
+    if (args[0] === 'braille' || args[0] === '점자') {
       var messageToBraille = args.slice(1).join(" ")
       var messageToBrailleResult = braille.toBraille(`${messageToBraille}`)
       message.channel.send({embed: {
         color: 3447003,
         title: 'translate',
         description: `**From __English__ To __Braille__:** ${messageToBrailleResult}`
-      }
-      })
+      }})
       return
-    } else if (args[0] === 'text') {
+    } else if (args[0] === 'text' || args[0] === '텍스트') {
       var brailleToText = args.slice(1).join(" ")
       var brailleToTextResult = braille.toText(`${brailleToText}`)
       message.channel.send({embed: {
         color: 3447003,
         title: 'translate',
         description: `**From __Braille__ to __English__:** ${brailleToTextResult}`
-      }
-      })
+      }})
     }
     translate(`${translateFor}`, {to: `${args[0]}`}).then(res => {
       message.channel.send({embed: {
         color: 3447003,
         title: 'translate',
         description: `**From __${res.from.language.iso}__ To __${args[0]}__:** ${res.text}`
-      }
-      })
+      }})
       return
     }).catch(error => {
       message.channel.send({embed: {
         color: 3447003,
         title: 'Error',
         description: `${error}`
-      }
-      })
+      }})
     })
   }
   return

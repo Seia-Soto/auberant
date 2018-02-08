@@ -5,6 +5,13 @@ module.exports = message => {
     return
   }
 
+  if (message.content.includes('discord.gg') || message.content.includes('discordapp.com/invite')) {
+    if (message.guild.id === '383944425648422912') {
+      message.delete()
+    }
+    return
+  }
+
   let client = message.client
   if (message.author.bot) return
   if (!message.content.startsWith(int.prefix)) return

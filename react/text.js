@@ -4,8 +4,7 @@ exports.run = (client, message, args) => {
       color: 3447003,
       title: 'text',
       description: `Send ASCii text. Argument is string.`
-    }
-    })
+    }})
     return
   }
   const figlet = require('figlet')
@@ -18,8 +17,7 @@ exports.run = (client, message, args) => {
         color: 3447003,
         title: 'Error',
         description: `${error}`
-      }
-      })
+      }})
       return
     }
     message.channel.send('```' + data + '```')

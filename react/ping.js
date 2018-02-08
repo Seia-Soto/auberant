@@ -3,21 +3,19 @@ exports.run = (client, message, args) => {
     color: 3447003,
     title: 'ping',
     description: 'Pinging..'
-  }
-  }).then((ping) => {
+  }}).then((ping) => {
     ping.edit({embed: {
       color: 3447003,
       title: 'ping',
       description: `Pong! Took ${ping.createdTimestamp - message.createdTimestamp}ms.`
-    }
-    })
+    }})
   })
   .catch(console.error)
 }
 
 exports.conf = {
   enabled: true,
-  guildOnly: false,
+  guildOnly: true,
   aliases: ['pong', '핑', '퐁'],
   permLevel: 0
 }

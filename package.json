@@ -1,5 +1,5 @@
 {
-  "name": "Auberant",
+  "name": "auberant",
   "version": "1.2.1",
   "description": "None Discord",
   "main": "default.js",
@@ -12,9 +12,27 @@
     "figlet": "^1.2.0",
     "fs": "0.0.1-security",
     "google-translate-api": "^2.3.0",
-    "mysql": "^2.15.0",
-    "opusscript": "0.0.6",
-    "sqlite3": "^3.1.13",
-    "ytdl-core": "^0.20.0"
-  }
+    "opusscript": "0.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artwork-if/auberant.git"
+  },
+  "keywords": [
+    "Auberant",
+    "Equailse",
+    "LuminescentLight",
+    "Discord",
+    "Bot",
+    "Translate",
+    "BigText"
+  ],
+  "bugs": {
+    "url": "https://github.com/artwork-if/auberant/issues"
+  },
+  "homepage": "https://auberant.tk"
 }
