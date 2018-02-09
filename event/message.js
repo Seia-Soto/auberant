@@ -15,7 +15,7 @@ module.exports = message => {
 const Enmap = require('enmap')
 account = new Enmap({name: 'ink'})
 
-const openAccount = account.get(message.author.id)
+const openAccount = account.get('message.author.id')
 console.log(openAccount)
 if (!openAccount) {
   account.set(message.author.id, 1)
