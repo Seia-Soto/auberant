@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
   switch (args[0]) {
     case 'open':
       if (!args[1]) {
-        const openAccount = account.get(message.author.id)
+        const openAccount = account.get('message.author.id')
         if (!openAccount) {
           message.channel.send({embed: {
             color: 3447003,
