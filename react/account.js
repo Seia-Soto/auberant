@@ -17,7 +17,7 @@ exports.run = (client, message, args) => {
           message.channel.send({embed: {
             color: 3447003,
             title: 'account',
-            description: `Can't find account:${message.author.id}.\nYou can create your account with using **;account create**.`
+            description: `Can't find account:${message.author.id}.`
           }})
           return
         } else {
