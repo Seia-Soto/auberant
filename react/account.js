@@ -1,5 +1,5 @@
 const Enmap = require('enmap')
-account = new Enmap({name: 'ink'})
+const account = new Enmap({name: 'account'})
 exports.run = (client, message, args) => {
   if (!args[0]) {
     message.channel.send({embed: {
@@ -12,24 +12,24 @@ exports.run = (client, message, args) => {
   switch (args[0]) {
     case 'open':
       if (!args[1]) {
-        const openAccount = account.get(`'${message.author.id}'`)
+        const openAccount = account.get(`${member.author.id}`)
         if (!openAccount) {
           message.channel.send({embed: {
             color: 3447003,
             title: 'account',
-            description: `Can't find account:${message.author.id}.`
+            description: `Can't find account:${message.author.id}.\nYou can create your account with using **;account create**.`
           }})
           return
         } else {
           message.channel.send({embed: {
             color: 3447003,
             title: 'account',
-            description: `There is ${openAccount} ink in account:${message.author.id}.`
+            description: `There is ${openAccount} inks in account:${message.author.id}.`
           }})
           return
         }
       } else {
-        const openAccount = account.get(`'${args[1]}'`)
+        const openAccount = account.get(`${args[1]}`)
         if (!openAccount) {
           message.channel.send({embed: {
             color: 3447003,
@@ -41,7 +41,7 @@ exports.run = (client, message, args) => {
           message.channel.send({embed: {
             color: 3447003,
             title: 'account',
-            description: `There is ${openAccount} ink in account:${args[1]}.`
+            description: `There is ${openAccount} inks in account:${args[1]}.`
           }})
           return
         }
