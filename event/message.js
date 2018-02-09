@@ -15,13 +15,13 @@ module.exports = message => {
 const Enmap = require('enmap')
 account = new Enmap({name: 'ink'})
 
-const openAccount = account.get(message.author.id)
+const openAccount = account.get(`'${message.author.id}'`)
 console.log(openAccount)
 if (!openAccount) {
-  account.set(message.author.id, 1)
+  account.set(`'${message.author.id}'`, 1)
 } else {
   addAccountValue = sum(openAccount, 1)
-  account.set(message.author.id, addAccountValue)
+  account.set(`'${message.author.id}'`, `'${addAccountValue}'`)
 }
 
   let client = message.client
