@@ -45,15 +45,15 @@ client.reload = command => {
 
 client.elevation = (message, guild) => {
   let permlvl = 0
-  let mod_role = message.guild.roles.find('name', `${int.moderator_rolename}`)
-  if (mod_role && message.member.roles.has(moderator_rolename.id)) permlvl = 2
-  let admin_role = message.guild.roles.find('name', `${int.administrator_rolename}`)
-  if (admin_role && message.member.roles.has(administrator_rolename.id)) permlvl = 3
+  let moderator_role = message.guild.roles.find('name', `${int.moderator_rolename}`)
+  if (moderator_role && message.member.roles.has(moderator_role.id)) permlvl = 2
+  let administrator_role = message.guild.roles.find('name', `${int.administrator_rolename}`)
+  if (administrator_role && message.member.roles.has(administrator_role.id)) permlvl = 3
   if (message.author.id === int.ownerid) permlvl = 4
   return permlvl
 }
 
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 
-client.login('NDEwMTcwNzcyNTk5MDc4OTEz.DV2DDQ.7yk1L3EgmwwP7y6lfnNJCvN2blI')
+client.login(process.env.token)
 client.destroy().then(() => client.login(process.env.token))
