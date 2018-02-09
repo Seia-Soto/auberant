@@ -19,7 +19,7 @@ const openAccount = account.get(message.author.id)
 if (!openAccount) {
   account.set(message.author.id, '2')
 } else {
-  account.set(message.author.id, openAccount + 2)
+  account.set(message.author.id, sum(openAccount, 2))
 }
 
   let client = message.client
