@@ -9,6 +9,7 @@
     "braille": "^1.1.0",
     "debug": "^3.1.0",
     "discord.js": "^11.3.0",
+    "enmap": "^0.4.2",
     "figlet": "^1.2.0",
     "fs": "0.0.1-security",
     "google-translate-api": "^2.3.0",

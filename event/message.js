@@ -4,16 +4,23 @@ module.exports = message => {
     message.delete()
     return
   }
-
   if (message.content.includes('discord.gg') || message.content.includes('discordapp.com/invite')) {
     if (message.guild.id === '383944425648422912') {
       message.delete()
     }
     return
   }
+  if (message.author.bot) return
+
+// Get inks!
+const Enmap = require('enmap')
+client.account = new Enmap({name: 'cash'})
+
+const openAccount = client.account.get(message.author.id) || { ink: 0 }
+openAccount.points++
 
   let client = message.client
-  if (message.author.bot) return
+  //if (message.author.bot) return
   if (!message.content.startsWith(int.prefix)) return
 
   let react = message.content.split(' ')[0].slice(int.prefix.length)
