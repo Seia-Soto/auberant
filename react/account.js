@@ -1,5 +1,5 @@
 const Enmap = require('enmap')
-client.account = new Enmap({name: 'account'})
+account = new Enmap({name: 'account'})
 exports.run = (client, message, args) => {
   if (!args[0]) {
     message.channel.send({embed: {
@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
   switch (args[0]) {
     case 'open':
       if (!args[1]) {
-        const openAccount = client.account.get(message.author.id).ink
+        const openAccount = account.get(message.author.id).ink
         if (!openAccount) {
           message.channel.send({embed: {
             color: 3447003,
