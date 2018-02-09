@@ -13,10 +13,14 @@ module.exports = message => {
 
 // Get inks!
 const Enmap = require('enmap')
-account = new Enmap({name: 'cash'})
+account = new Enmap({name: 'ink'})
 
-const openAccount = account.get(message.author.id) || { ink: 0 }
-openAccount.points++
+const openAccount = account.get(message.author.id)
+if (!openAccount) {
+  account.set(message.author.id, '2')
+} else {
+  account.set(message.author.id, openAccount + 2)
+}
 
   let client = message.client
   //if (message.author.bot) return
