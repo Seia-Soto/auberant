@@ -2,7 +2,7 @@ exports.run = (client, message, args) => {
   message.channel.send({embed: {
     color: 3447003,
     title: 'help',
-    description: `With ${client.member.size} people in ${client.guilds.size} servers!`
+    description: `With ${client.user.size} people in ${client.guilds.size} servers!`
   }})
 }
 
