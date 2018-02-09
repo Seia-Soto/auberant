@@ -24,12 +24,12 @@ exports.run = (client, message, args) => {
           message.channel.send({embed: {
             color: 3447003,
             title: 'account',
-            description: `There is ${openAccount} inks in account:${message.author.id}.`
+            description: `There is ${openAccount} ink in account:${message.author.id}.`
           }})
           return
         }
       } else {
-        const openAccount = account.get(args[1]).ink
+        const openAccount = account.get(args[1])
         if (!openAccount) {
           message.channel.send({embed: {
             color: 3447003,
@@ -41,7 +41,7 @@ exports.run = (client, message, args) => {
           message.channel.send({embed: {
             color: 3447003,
             title: 'account',
-            description: `There is ${openAccount} inks in account:${args[1]}.`
+            description: `There is ${openAccount} ink in account:${args[1]}.`
           }})
           return
         }
