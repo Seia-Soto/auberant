@@ -17,9 +17,10 @@ account = new Enmap({name: 'ink'})
 
 const openAccount = account.get(message.author.id)
 if (!openAccount) {
-  account.set(message.author.id, '2')
+  account.set(message.author.id, '1')
 } else {
-  account.set(message.author.id, sum(openAccount, 2))
+  addAccountValue = sum(openAccount, 2)
+  account.set(message.author.id, addAccountValue)
 }
 
   let client = message.client
