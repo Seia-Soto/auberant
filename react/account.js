@@ -29,7 +29,7 @@ exports.run = (client, message, args) => {
           return
         }
       } else {
-        const openAccount = client.account.get(args[1]).ink
+        const openAccount = account.get(args[1]).ink
         if (!openAccount) {
           message.channel.send({embed: {
             color: 3447003,
