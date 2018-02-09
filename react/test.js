@@ -5,8 +5,8 @@ exports.run = (client, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ['pong', '핑', '퐁'],
-  permLevel: 2
+  aliases: [],
+  permLevel: 3
 }
 
 exports.help = {
