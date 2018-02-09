@@ -1,5 +1,5 @@
 const Enmap = require('enmap')
-account = new Enmap({name: 'account'})
+account = new Enmap({name: 'ink'})
 exports.run = (client, message, args) => {
   if (!args[0]) {
     message.channel.send({embed: {
