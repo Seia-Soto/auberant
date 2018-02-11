@@ -10,19 +10,8 @@ module.exports = message => {
     }
     return
   }
+  
   if (message.author.bot) return
-
-// Get inks!
-const Enmap = require('enmap')
-account = new Enmap({name: 'account'})
-
-const openAccount = account.get(message.author.username)
-if (!openAccount) {
-  account.set(message.author.username, 1)
-} else {
-  account.set(message.author.username, openAccount + 1)
-}
-
   let client = message.client
   //if (message.author.bot) return
   if (!message.content.startsWith(int.prefix)) return
