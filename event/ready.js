@@ -7,5 +7,8 @@ module.exports = client => {
 
   // Discord Bot List Patch
   const DBL = require("dblapi.js")
-  const dbl = new DBL(process.env.dbl_token, client)
+  const dbl = new DBL(process.env.dbl_token)
+  setInterval(() => {
+    dbl.postStats(client.guilds.size);
+  }, 10000);
 }
