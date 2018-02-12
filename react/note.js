@@ -14,14 +14,12 @@ exports.run = (client, message, args) => {
     case 'new':
       var contentToNote = args.slice(1).join(' ')
       var contentHeaderID = Math.floor(Math.random() * 9999) + 1
-      console.log(contentToNote);
-      console.log(contentHeaderID);
-      Notes.set(`${contentHeaderID}`, `${contentToNote}`)
+      Notes.set(contentHeaderID, contentToNote)
 
       message.channel.send({embed: {
         color: 3447003,
         title: 'note',
-        description: `Now you can open your saved notes anywhere you have Auberant! Note ID is ${contentHeaderID}. I do not want anyone else to use that ID ...`
+        description: `Now you can open your saved notes anywhere you have Auberant! Note ID is **${contentHeaderID}**. I do not want anyone else to use that ID ...`
       }})
       break;
     case 'open':
@@ -32,7 +30,7 @@ exports.run = (client, message, args) => {
           description: `There was a problem fetching your notes. The name of the note to import is missing! :P`
         }})
       } else {
-        message.channel.send({embed: {
+        message.author.send({embed: {
           color: 3447003,
           title: 'note',
           description: `${Notes.get(args[1])}`,
