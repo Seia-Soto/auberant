@@ -1,5 +1,6 @@
 const Enmap = require('enmap')
-const Notes = new Enmap()
+const EnmapLevel = require('enmap-level')
+const Notes = new Enmap({ provider: new EnmapLevel({ name: 'note' }); })
 exports.run = (client, message, args) => {
   if (!args[0]) {
     message.channel.send({embed: {
@@ -29,7 +30,7 @@ exports.run = (client, message, args) => {
           description: `There was a problem fetching your notes. The name of the note to import is missing! :P`
         }})
       } else {
-        message.channel.send({embed: {
+        message.author.send({embed: {
           color: 3447003,
           title: 'note',
           description: `${Notes.get(args[1])}`,
