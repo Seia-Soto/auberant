@@ -30,7 +30,7 @@ exports.run = (client, message, args) => {
           description: `There was a problem fetching your notes. The name of the note to import is missing! :P`
         }})
       } else {
-        message.author.send({embed: {
+        message.channel.send({embed: {
           color: 3447003,
           title: 'note',
           description: `${Notes.get(args[1])}`,
