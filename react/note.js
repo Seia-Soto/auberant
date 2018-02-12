@@ -50,7 +50,7 @@ exports.conf = {
 }
 
 exports.help = {
-  name: 'paperclip',
+  name: 'note',
   description: 'Take notes on Auberant :P',
   usage: 'note <content>'
 }
