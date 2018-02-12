@@ -13,8 +13,8 @@ exports.run = (client, message, args) => {
   switch (args[0]) {
     case 'new':
       var contentToNote = args.slice(1).join(' ')
-      var titleIdentificater = Math.random() * (9999 - 1) + 1
-      Notes.set(titleIdentificater, contentToNote)
+      var contentHeaderID = Math.floor(Math.random() * 9999) + 1
+      Notes.set(contentHeaderID, contentToNote)
 
       message.channel.send({embed: {
         color: 3447003,
