@@ -19,7 +19,7 @@ exports.run = (client, message, args) => {
       message.channel.send({embed: {
         color: 3447003,
         title: 'note',
-        description: `Now you can open your saved notes anywhere you have Auberant! Note ID is ${titleIdentificater}. I do not want anyone else to use that ID ...`
+        description: `Now you can open your saved notes anywhere you have Auberant! Note ID is ${contentHeaderID}. I do not want anyone else to use that ID ...`
       }})
       break;
     case 'open':
