@@ -1,6 +1,5 @@
 const Enmap = require('enmap')
-const EnmapLevel = require('enmap-level')
-const Notes = new Enmap({ provider: new EnmapLevel({ name: 'note' }) })
+const Notes = new Enmap()
 exports.run = (client, message, args) => {
   if (!args[0]) {
     message.channel.send({embed: {

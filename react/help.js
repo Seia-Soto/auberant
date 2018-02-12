@@ -2,7 +2,7 @@ exports.run = (client, message, args) => {
   message.channel.send({embed: {
     color: 3447003,
     title: 'help',
-    description: `With ${client.users.size} people in ${client.guilds.size} servers!\n[Documentation (https://auberant.tk)](https://auberant.tk/products/bot)`
+    description: `With ${client.users.size} people in ${client.guilds.size} servers!\n[You can find the bot's documentation in here. (https://auberant.tk)](https://auberant.tk/)`
   }})
 }
 
@@ -15,6 +15,6 @@ exports.conf = {
 
 exports.help = {
   name: 'help',
-  description: 'How to use',
+  description: 'Open bot documentation',
   usage: 'help'
 }
