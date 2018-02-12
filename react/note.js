@@ -14,6 +14,8 @@ exports.run = (client, message, args) => {
     case 'new':
       var contentToNote = args.slice(1).join(' ')
       var contentHeaderID = Math.floor(Math.random() * 9999) + 1
+      console.log(contentToNote)
+      console.log(contentHeaderID)
       Notes.set(contentHeaderID, contentToNote)
 
       message.channel.send({embed: {
