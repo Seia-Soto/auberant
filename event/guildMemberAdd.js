@@ -1,5 +1,5 @@
 module.exports = member => {
-  const channel = member.guild.channels.find('name', 'member-log')
+  const channel = guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES"))
   if (member.guild.id === '383944425648422912') {
     channel.send({embed: {
       color: 3447003,
