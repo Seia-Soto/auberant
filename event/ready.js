@@ -10,5 +10,5 @@ module.exports = client => {
   const dbl = new DBL(process.env.dbl_token)
   setInterval(() => {
     dbl.postStats(client.guilds.size);
-  }, 1000);
+  }, 90000);
 }
