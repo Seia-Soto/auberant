@@ -1,16 +1,5 @@
 const int = require('../int.json')
 module.exports = message => {
-  if (message.content.includes('바보') || message.content.includes('바부')) {
-    message.delete()
-    return
-  }
-  if (message.content.includes('discord.gg') || message.content.includes('discordapp.com/invite')) {
-    if (message.guild.id === '383944425648422912') {
-      message.delete()
-    }
-    return
-  }
-  
   if (message.author.bot) return
   let client = message.client
   //if (message.author.bot) return

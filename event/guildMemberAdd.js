@@ -1,15 +1,10 @@
 module.exports = member => {
   const channel = member.guild.channels.find('name', 'member-log')
-  if (!channel) return
-  channel.send({embed: {
-    color: 3447003,
-    title: 'guildMemberAdd',
-    description: `Hi? **${member}**. I am pleased to meet you!`,
-    timestamp: new Date(),
-    footer: {
-      icon_url: 'https://cdn.discordapp.com/app-icons/406881830185467915/aee5e3748f34a0e6d7fd7c70ebfacbf0.png',
-      text: '© auberant 2018, all rights reserved'
-    }
+  if (member.guild.id === '383944425648422912') {
+    channel.send({embed: {
+      color: 3447003,
+      title: 'guildMemberAdd',
+      description: `Hi, there? Say hello to Auberant! I am pleased to meet you ${member}!\nPlease look at the rules and remember before you chat. Rules can found on #int `
+    }})
   }
-  })
-};
+}
