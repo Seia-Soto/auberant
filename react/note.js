@@ -6,7 +6,7 @@ exports.run = (client, message, args) => {
     message.channel.send({embed: {
       color: 3447003,
       title: 'note',
-      description: 'Take notes on Auberant. Just try: ``;note new <content>``. And open it with ``;note open <ID>``.\n\nA note can disappear when Auberant get new update. Do not keep your password or private thing on Auberant. We does not We are not responsible for any leaked personal information or deleted notes. :P'
+      description: 'Take notes on Auberant. Just try: ``;note new <content>``. And open it with ``;note open <ID>``.\n\nA note can disappear when Auberant get new update. Do not keep your password or private thing on Auberant. We are not responsible for any leaked personal information or deleted notes. :P'
     }})
     return
   }
