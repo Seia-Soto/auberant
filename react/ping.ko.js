@@ -1,13 +1,13 @@
 exports.run = (client, message, args) => {
   message.channel.send({embed: {
     color: 3447003,
-    title: 'ping',
-    description: 'Pinging..'
+    title: '질의',
+    description: '요청 중..'
   }}).then((ping) => {
     ping.edit({embed: {
       color: 3447003,
-      title: 'ping',
-      description: `Pong! Took ${ping.createdTimestamp - message.createdTimestamp}ms.`
+      title: '질의',
+      description: `요청이 반환되었습니다! ${ping.createdTimestamp - message.createdTimestamp}ms가 소요되었습니다.`
     }})
   })
   .catch(console.error)
@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: [],
+  aliases: ['질의'],
   permLevel: 0
 }
 

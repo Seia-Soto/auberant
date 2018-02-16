@@ -2,8 +2,8 @@ exports.run = (client, message, args) => {
   if (!args[0]) {
     message.channel.send({embed: {
       color: 3447003,
-      title: 'text',
-      description: `Send ASCii text. Argument is string.`
+      title: '텍스트',
+      description: `ASCii 문자열을 전송합니다. 인수는 문자열입니다.`
     }})
     return
   }
@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
       console.error(error)
       message.channel.send({embed: {
         color: 3447003,
-        title: 'Error',
+        title: '오류',
         description: `${error}`
       }})
       return
@@ -32,7 +32,7 @@ exports.conf = {
 }
 
 exports.help = {
-  name: 'text',
+  name: 'text.ko',
   description: 'Print text to ascii artwork',
-  usage: 'text <word>'
+  usage: 'text.ko <word>'
 }
