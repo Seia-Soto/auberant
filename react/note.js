@@ -46,7 +46,7 @@ exports.run = (client, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ['paperclip', 'memo', '노트', '메모'],
+  aliases: [],
   permLevel: 0
 }
 
