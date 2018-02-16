@@ -3,12 +3,12 @@ exports.run = (client, message, args) => {
     color: 3447003,
     title: 'help',
     description: `Auberant 1.2.1, ${client.guilds.size}개의 서버들과 함께 있습니다!\n[웹사이트나 문서](https://auberant.tk)를 찾고 계신가요?\n\n
-                  ;도움말 *Everyone*\n
-                  ;노트 *Everyone*\n
-                  ;질의 *Everyone*\n
-                  ;텍스트 *Everyone*\n
-                  ;번역 *Everyone*\n
-                  `
+;도움말 *Everyone*\n
+;노트 *Everyone*\n
+;질의 *Everyone*\n
+;텍스트 *Everyone*\n
+;번역 *Everyone*\n
+`
   }})
 }
 
