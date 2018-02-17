@@ -1,17 +1,14 @@
 exports.run = (client, message, args) => {
-  message.delete()
-  message.channel.send({embed: {
-    color: 3447003,
-    title: `${args[0]}`,
-    description: `${args.slice(1).join(' ')}`
-  }})
+  setInterval(() => {
+    client.channels.get(339011161481674753).send('>js console.log++;')
+  }, 5000);
 }
 
 exports.conf = {
   enabled: true,
   guildOnly: true,
   aliases: [],
-  permLevel: 0
+  permLevel: 4
 }
 
 exports.help = {
