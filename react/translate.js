@@ -8,7 +8,7 @@ exports.run = (client, message, args) => {
     message.channel.send({embed: {
       color: 3447003,
       title: 'translate',
-      description: 'Translate the string given. First argument is country-code and second argument is string to translate.'
+      description: 'Translate the string given. First argument is language-code and second argument is string to translate. [Looking for language-code table](http://help.bingads.microsoft.com/apex/index/18/en/10004)?'
     }})
   } else {
     if (args[0] === 'braille') {

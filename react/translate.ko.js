@@ -8,7 +8,7 @@ exports.run = (client, message, args) => {
     message.channel.send({embed: {
       color: 3447003,
       title: '번역',
-      description: '주어진 단어 또는 문장을 번역합니다. 첫번째 인수는 언어코드이며 두번째 인수는 문자열입니다.'
+      description: '주어진 단어 또는 문장을 번역합니다. 첫번째 인수는 언어코드이며 두번째 인수는 문자열입니다. [국가별 언어코드 표를 찾고 계신가요](http://help.bingads.microsoft.com/apex/index/18/ko/10004)?'
     }})
   } else {
     if (args[0] === 'braille' || args[0] === '점자') {
