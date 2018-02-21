@@ -1,4 +1,4 @@
-const whois = require('whois')
+const whois = require('whois-api')
 exports.run = (client, message, args) => {
   if (!args[0]) {
     message.channel.send({embed: {
@@ -7,8 +7,8 @@ exports.run = (client, message, args) => {
       description: `Query domain registeration information from ICANN WHOIS. Argument is domain name.`
     }})
   } else {
-    whois.lookup(args[0], (error, data) => {
-      console.log(data)
+    whois.rawLookup(args[0], (error, result) => {
+      console.log(result)
     })
   }
 }

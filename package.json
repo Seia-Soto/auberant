@@ -16,7 +16,7 @@
     "fs": "0.0.1-security",
     "google-translate-api": "^2.3.0",
     "opusscript": "0.0.6",
-    "whois": "^2.5.9",
+    "whois-api": "^1.0.2",
     "wikijs": "^4.5.1"
   },
   "devDependencies": {},
