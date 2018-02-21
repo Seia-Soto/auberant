@@ -26,7 +26,7 @@ exports.run = (client, message, args) => {
           apiURL: 'http://' + urlToQuery + '/wiki/api.php',
           origin: null
         }).page(pageToQuery)
-          .then(queryResult => {
+          .then((queryResult) => {
             var queryResult = queryResult.substring(0, 2047)
             message.channel.send({embed: {
               color: 3447003,
@@ -72,7 +72,7 @@ exports.run = (client, message, args) => {
             apiURL: 'http://' + urlToQuery + '/wiki/api.php',
             origin: null
           }).page(pageToQuery)
-            .then(queryResult => {
+            .then((queryResult) => {
               var queryResult = queryResult.substring(0, 2047)
               message.channel.send({embed: {
                 color: 3447003,
@@ -84,7 +84,7 @@ exports.run = (client, message, args) => {
         } else {
           var pageToQuery = args.slice(1).join(' ')
           wiki().page(pageToQuery)
-            .then(queryResult => {
+            .then((queryResult) => {
               var queryResult = queryResult.substring(0, 2047)
               message.channel.send({embed: {
                 color: 3447003,
