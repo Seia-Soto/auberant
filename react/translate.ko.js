@@ -1,7 +1,6 @@
+const translate = require('google-translate-api')
+const braille = require('braille')
 exports.run = (client, message, args) => {
-  const translate = require('google-translate-api')
-  const braille = require('braille')
-
   var translateFor = args.slice(1).join(" ")
 
   if (!translateFor) {
