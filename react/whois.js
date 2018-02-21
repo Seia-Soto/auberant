@@ -8,6 +8,8 @@ exports.run = (client, message, args) => {
     }})
   } else {
     whois.rawLookup(args[0], (error, result) => {
+      console.log(result)
+      //result = substring()
       message.channel.send({embed: {
         color: 3447003,
         title: 'whois',
