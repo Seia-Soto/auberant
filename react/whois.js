@@ -1,4 +1,4 @@
-const whois = require('whois');
+const whois = require('whois')
 exports.run = (client, message, args) => {
   if (!args[0]) {
     message.channel.send({embed: {
@@ -9,7 +9,6 @@ exports.run = (client, message, args) => {
   } else {
     whois.lookup(args[0], (error, data) => {
       console.log(data)
-      return
     })
   }
 }
