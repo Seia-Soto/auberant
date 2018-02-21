@@ -14,6 +14,14 @@ exports.run = (client, message, args) => {
           }})
         } else {
           whois.lookup(args[0], (error, result) => {
+            if (result === undefined) {
+              message.channel.send({embed: {
+                color: 3447003,
+                title: '후이즈',
+                description: `도메인 정보를 가져올 수 없습니다.`
+              }})
+              return
+            }
             var result = result.substring(0, 2047)
             message.channel.send({embed: {
               color: 3447003,
@@ -32,6 +40,14 @@ exports.run = (client, message, args) => {
           }})
         } else {
           whois.lookup(args[0], (error, result) => {
+            if (result === undefined) {
+              message.channel.send({embed: {
+                color: 3447003,
+                title: 'whois',
+                description: `Can't read properties of result.`
+              }})
+              return
+            }
             var result = result.substring(0, 2047)
             message.channel.send({embed: {
               color: 3447003,
