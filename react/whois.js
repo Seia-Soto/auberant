@@ -5,24 +5,6 @@ exports.run = (client, message, args) => {
   const react = message.content.split(' ')[0].slice(int.prefix.length)
   translate(react, {to: 'en'}).then(res => {
     switch (res.from.language.iso) {
-      case 'en':
-        if (!args[0]) {
-          message.channel.send({embed: {
-            color: 3447003,
-            title: 'whois',
-            description: `Query domain registeration information from ICANN WHOIS. Argument is domain name.`
-          }})
-        } else {
-          whois.lookup(args[0], (error, result) => {
-            var result = result.substring(0, 2047)
-            message.channel.send({embed: {
-              color: 3447003,
-              title: 'whois',
-              description: `${result}`
-            }})
-          })
-        }
-        break;
       case 'ko':
         if (!args[0]) {
           message.channel.send({embed: {
@@ -36,6 +18,24 @@ exports.run = (client, message, args) => {
             message.channel.send({embed: {
               color: 3447003,
               title: '후이즈',
+              description: `${result}`
+            }})
+          })
+        }
+        break;
+      default:
+        if (!args[0]) {
+          message.channel.send({embed: {
+            color: 3447003,
+            title: 'whois',
+            description: `Query domain registeration information from ICANN WHOIS. Argument is domain name.`
+          }})
+        } else {
+          whois.lookup(args[0], (error, result) => {
+            var result = result.substring(0, 2047)
+            message.channel.send({embed: {
+              color: 3447003,
+              title: 'whois',
               description: `${result}`
             }})
           })
