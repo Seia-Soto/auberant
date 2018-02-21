@@ -3,7 +3,7 @@ const whois = require('whois')
 const int = require('../int.json')
 exports.run = (client, message, args) => {
   const react = message.content.split(' ')[0].slice(int.prefix.length)
-  translate(react, {to: en}).then(res => {
+  translate(react, {to: 'en'}).then(res => {
     switch (res.from.language.iso) {
       case 'en':
         if (!args[0]) {
