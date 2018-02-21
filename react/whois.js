@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
         } else {
           whois.lookup(args[0], (error, result) => {
             console.log(result)
-            result = substring(0, 2047)
+            result = substring(1, 2047)
             message.channel.send({embed: {
               color: 3447003,
               title: 'whois',
@@ -28,16 +28,16 @@ exports.run = (client, message, args) => {
         if (!args[0]) {
           message.channel.send({embed: {
             color: 3447003,
-            title: 'whois',
+            title: '후이즈',
             description: `등록된 도메인 정보를 ICANN WHOIS에서 가져옵니다. 인수는 도메인 이름입니다.`
           }})
         } else {
           whois.lookup(args[0], (error, result) => {
             console.log(result)
-            result = substring(0, 2047)
+            result = substring(1, 2047)
             message.channel.send({embed: {
               color: 3447003,
-              title: 'whois',
+              title: '후이즈',
               description: `${result}`
             }})
           })
