@@ -1,8 +1,8 @@
 const translate = require('google-translate-api')
 const whois = require('whois')
 const int = require('../int.json')
-const react = message.content.split(' ')[0].slice(int.prefix.length)
 exports.run = (client, message, args) => {
+  const react = message.content.split(' ')[0].slice(int.prefix.length)
   translate(react, {to: en}).then(res => {
     switch (res.from.language.iso) {
       case 'en':
