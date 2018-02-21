@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
         } else {
           whois.lookup(args[0], (error, result) => {
             console.log(result)
-            result = substring(1, 2047)
+            var result = substring(0, 2047)
             message.channel.send({embed: {
               color: 3447003,
               title: 'whois',
@@ -34,7 +34,7 @@ exports.run = (client, message, args) => {
         } else {
           whois.lookup(args[0], (error, result) => {
             console.log(result)
-            result = substring(1, 2047)
+            var result = substring(0, 2047)
             message.channel.send({embed: {
               color: 3447003,
               title: '후이즈',
