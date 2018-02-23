@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
     switch (res.from.language.iso) {
       case 'ko':
         var embed = new Discord.RichEmbed()
-          .setColor(0x00AE86)
+          .setColor(3447003)
           .setTitle(`${message.author.username}님의 프로필사진`)
           .setImage(`${message.author.avatarURL}`)
           .setURL(`${message.author.avatarURL}`)
@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
         break;
       default:
         var embed = new Discord.RichEmbed()
-          .setColor(0x00AE86)
+          .setColor(3447003)
           .setTitle(`Avatar of ${message.author.username}`)
           .setImage(`${message.author.avatarURL}`)
           .setURL(`${message.author.avatarURL}`)
