@@ -6,7 +6,7 @@ exports.run = (client, message, args) => {
   translate(react, {to: 'en'}).then(res => {
     switch (res.from.language.iso) {
       case 'ko':
-        const embed = new Discord.RichEmbed()
+        var embed = new Discord.RichEmbed()
           .setTitle('Auberant를 사용 중에 무슨 문제가 있나요?')
           .setAuthor('Auberant', 'https://cdn.discordapp.com/avatars/410170772599078913/a3161fdc1856d770c4fd84113ef31b38.png?size=1024')
           /*
@@ -40,12 +40,12 @@ exports.run = (client, message, args) => {
 **질의** Auberant 반응속도 얻기
 **번역** 문자열 번역
 **후이즈** ICANN Whois에서 도메인 정보 얻기
-**텍스트** ASCii art 출력`, true)
+**텍스트** ASCii art 출력`, true);
 
           message.channel.send({embed})
         break;
       default:
-        const embed = new Discord.RichEmbed()
+         var embed = new Discord.RichEmbed()
           .setTitle('Is there a problem using Auberant?')
           .setAuthor('Auberant', 'https://cdn.discordapp.com/avatars/410170772599078913/a3161fdc1856d770c4fd84113ef31b38.png?size=1024')
           /*
@@ -79,7 +79,7 @@ exports.run = (client, message, args) => {
 **ping** get Auberant's respones-time
 **translate** translate string
 **whois** load domain information from ICANN Whois
-**text** out ASCii art`, true)
+**text** out ASCii art`, true);
 
           message.channel.send({embed})
         break;
