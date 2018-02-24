@@ -8,7 +8,7 @@ exports.run = (client, message, args) => {
       case 'ko':
         if (!args[0]) {
           message.channel.send({embed: {
-            color: parseColor(int.color),
+            color: 4620980,
             title: '후이즈',
             description: `등록된 도메인 정보를 ICANN WHOIS에서 가져옵니다. 인수는 도메인 이름입니다.`
           }})
@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
           whois.lookup(args[0], (error, result) => {
             if (result === undefined) {
               message.channel.send({embed: {
-                color: parseColor(int.color),
+                color: 4620980,
                 title: '후이즈',
                 description: `도메인 정보를 가져올 수 없습니다.`
               }})
@@ -24,7 +24,7 @@ exports.run = (client, message, args) => {
             }
             var result = result.substring(0, 2047)
             message.channel.send({embed: {
-              color: parseColor(int.color),
+              color: 4620980,
               title: '후이즈',
               description: `${result}`
             }})
@@ -34,7 +34,7 @@ exports.run = (client, message, args) => {
       default:
         if (!args[0]) {
           message.channel.send({embed: {
-            color: parseColor(int.color),
+            color: 4620980,
             title: 'whois',
             description: `Query domain registeration information from ICANN WHOIS. Argument is domain name.`
           }})
@@ -42,7 +42,7 @@ exports.run = (client, message, args) => {
           whois.lookup(args[0], (error, result) => {
             if (result === undefined) {
               message.channel.send({embed: {
-                color: parseColor(int.color),
+                color: 4620980,
                 title: 'whois',
                 description: `Can't read properties of result.`
               }})
@@ -50,7 +50,7 @@ exports.run = (client, message, args) => {
             }
             var result = result.substring(0, 2047)
             message.channel.send({embed: {
-              color: parseColor(int.color),
+              color: 4620980,
               title: 'whois',
               description: `${result}`
             }})

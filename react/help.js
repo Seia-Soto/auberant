@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
           /*
            * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
            */
-          .setColor(parseColor(int.color))
+          .setColor(4620980)
           .setDescription(`안녕하세요? Auberant를 사용해주셔서 감사합니다!\n${client.guilds.size}개의 서버들이 Auberant를 채택했으며 현재 200개 이상의 커밋을 기록했답니다!`)
           //.setFooter('FooterText', 'Image_URL')
           .setImage('https://cdn.discordapp.com/attachments/383944646046253056/416347036758048772/let_art_is_new_Artwork.png')
@@ -51,7 +51,7 @@ exports.run = (client, message, args) => {
           /*
            * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
            */
-          .setColor(parseColor(int.color))
+          .setColor(4620980)
           .setDescription(`Hi, there? Thank you for using Auberant!\n${client.guilds.size} servers have adopted Auberant. And recorded over 200 commits!`)
           //.setFooter('FooterText', 'Image_URL')
           .setImage('https://cdn.discordapp.com/attachments/383944646046253056/416347036758048772/let_art_is_new_Artwork.png')
