@@ -66,7 +66,7 @@ exports.run = (client, message, args) => {
           /*
            * Inline fields may not display as inline if the thumbnail and/or image is too big.
            */
-          .addField(`Auberant ${int.version.substring(0, 5)} distributions (${int.date})', 'Artwork-if ${int.version} build ${int.build}\nDeveloped by Equalise, Tree with 2 contributors!`, true)
+          .addField(`Auberant ${int.version.substring(0, 5)} distributions (${int.date})`, `Artwork-if ${int.version} build ${int.build}\nDeveloped by Equalise, Tree with 2 contributors!`, true)
           /*
            * Blank field, useful to create some space.
            */

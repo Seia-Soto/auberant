@@ -56,13 +56,40 @@ exports.run = (client, message, args) => {
     }
     message.channel.send({embed})
       break;
+    case ';입학':
+      if (!args[0]) {
+        var embed = new Discord.RichEmbed()
+          .setColor(4620980)
+          .setTitle(`${message.author.tag}`)
+          .setThumbnail(`${message.author.avatarURL}`)
+          .setURL(`${message.author.avatarURL}`)
+          .setDescription(`**${message.author.username} 예비학생**, 쿼드라 매지컬 엔지니어링 퍼실리티 부속 중등교육학교에 가기 위해서는 다음 중 하나를 기준으로 입학해야 해요.  > ;입학 ***초등학생, 중학생, 고등학생, 교장, 이사장, 교수***`)
+      } else {
+        let setgetrole = message.guild.roles.find('name', `${args[1]}`)
+        message.author.addRole(role).catch(error => {
+          var embed = new Discord.RichEmbed()
+            .setColor(4620980)
+            .setTitle(`${message.author.tag}`)
+            .setThumbnail(`${message.author.avatarURL}`)
+            .setURL(`${message.author.avatarURL}`)
+            .setDescription(`**${message.author.username} 예비학생**, 쿼드라 매지컬 엔지니어링 퍼실리티 부속 중등교육학교에 가기 위해서는 다음 중 하나를 기준으로 입학해야 해요.  > ;입학 ***초등학생, 중학생, 고등학생, 교장, 이사장, 교수***`)
+          message.channel.send({embed})
+        })
+        var embed = new Discord.RichEmbed()
+          .setColor(4620980)
+          .setTitle(`${message.author.tag}`)
+          .setThumbnail(`${message.author.avatarURL}`)
+          .setURL(`${message.author.avatarURL}`)
+          .setDescription(`**${message.author.username} 학생**, 쿼드라 매지컬 엔지니어링 퍼실리티 부속 중등교육학교에 입학을 축하합니다!`)
+      }
+      break;
   }
 }
 
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ['학생증'],
+  aliases: ['학생증', '입학'],
   permLevel: 0
 }
 
