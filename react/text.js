@@ -26,7 +26,7 @@ exports.run = (client, message, args) => {
       case 'ko':
         if (!args[0]) {
           message.channel.send({embed: {
-            color: `${int.color}`,
+            color: parseColor(int.color),
             title: '텍스트',
             description: `ASCii 문자열을 전송합니다. 인수는 문자열입니다.`
           }})
@@ -37,7 +37,7 @@ exports.run = (client, message, args) => {
           if (error) {
             console.error(error)
             message.channel.send({embed: {
-              color: `${int.color}`,
+              color: parseColor(int.color),
               title: '오류',
               description: `${error}`
             }})
@@ -49,7 +49,7 @@ exports.run = (client, message, args) => {
       default:
         if (!args[0]) {
           message.channel.send({embed: {
-            color: `${int.color}`,
+            color: parseColor(int.color),
             title: 'text',
             description: `Send ASCii text. Argument is string.`
           }})
@@ -60,7 +60,7 @@ exports.run = (client, message, args) => {
           if (error) {
             console.error(error)
             message.channel.send({embed: {
-              color: `${int.color}`,
+              color: parseColor(int.color),
               title: 'Error',
               description: `${error}`
             }})

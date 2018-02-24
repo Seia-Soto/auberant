@@ -10,7 +10,7 @@ exports.run = (client, message, args) => {
       case 'ko':
         if (!args[0]) {
           message.channel.send({embed: {
-            color: `${int.color}`,
+            color: parseColor(int.color),
             title: '노트',
             description: 'Auberant에서 노트를 써보세요. 먼저 노트를 만들어보세요: ``;노트 새로만들기 <내용>``. 그리고 ``;노트 열기 <ID>``로 열어보세요.\n\n노트는 Auberant가 업데이트할 때 언제든지 사라질 수 있습니다. 비밀번호 또는 개인정보를 Auberant에 저장하지 마세요. 저희는 유실된 노트 또는 개인정보에 대해 책임지지 않습니다. :P'
           }})
@@ -23,7 +23,7 @@ exports.run = (client, message, args) => {
             Notes.set(`${contentHeaderID}`, `${contentToNote}`)
 
             message.channel.send({embed: {
-              color: `${int.color}`,
+              color: parseColor(int.color),
               title: '노트',
               description: `이제 저장된 노트를 Auberant가 있는 어디에서나 열 수 있습니다! 노트의 ID는 **${contentHeaderID}**입니다. 다른 누군가가 이 ID를 사용하지 않기를 빌죠...`
             }})
@@ -31,13 +31,13 @@ exports.run = (client, message, args) => {
           case '열기':
             if (!args[1]) {
               message.channel.send({embed: {
-                color: `${int.color}`,
+                color: parseColor(int.color),
                 title: '노트',
                 description: `예상치 않은 문제가 생겼어요! 노트의 ID가 주어지지 않았잖아요. :P`
               }})
             } else {
               message.channel.send({embed: {
-                color: `${int.color}`,
+                color: parseColor(int.color),
                 title: '노트',
                 description: `${Notes.get(args[1])}`,
                 footer: {
@@ -51,7 +51,7 @@ exports.run = (client, message, args) => {
       default:
         if (!args[0]) {
           message.channel.send({embed: {
-            color: `${int.color}`,
+            color: parseColor(int.color),
             title: 'note',
             description: 'Take notes on Auberant. Just try: ``;note new <content>``. And open it with ``;note open <ID>``.\n\nA note can disappear when Auberant get new update. Do not keep your password or private thing on Auberant. We are not responsible for any leaked personal information or deleted notes. :P'
           }})
@@ -64,7 +64,7 @@ exports.run = (client, message, args) => {
             Notes.set(`${contentHeaderID}`, `${contentToNote}`)
 
             message.channel.send({embed: {
-              color: `${int.color}`,
+              color: parseColor(int.color),
               title: 'note',
               description: `Now you can open your saved notes anywhere you have Auberant! Note ID is **${contentHeaderID}**. I do not want anyone else to use that ID ...`
             }})
@@ -72,13 +72,13 @@ exports.run = (client, message, args) => {
           case 'open':
             if (!args[1]) {
               message.channel.send({embed: {
-                color: `${int.color}`,
+                color: parseColor(int.color),
                 title: 'note',
                 description: `There was a problem fetching your notes. The name of the note to import is missing! :P`
               }})
             } else {
               message.channel.send({embed: {
-                color: `${int.color}`,
+                color: parseColor(int.color),
                 title: 'note',
                 description: `${Notes.get(args[1])}`,
                 footer: {

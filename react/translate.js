@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
         var translateFor = args.slice(1).join(" ")
         if (!translateFor) {
           message.channel.send({embed: {
-            color: `${int.color}`,
+            color: parseColor(int.color),
             title: '번역',
             description: '주어진 단어 또는 문장을 번역합니다. 첫번째 인수는 언어코드이며 두번째 인수는 문자열입니다. [국가별 언어코드 표를 찾고 계신가요](http://help.bingads.microsoft.com/apex/index/18/ko/10004)?'
           }})
@@ -18,7 +18,7 @@ exports.run = (client, message, args) => {
             var messageToBraille = args.slice(1).join(" ")
             var messageToBrailleResult = braille.toBraille(`${messageToBraille}`)
             message.channel.send({embed: {
-              color: `${int.color}`,
+              color: parseColor(int.color),
               title: 'translate',
               description: `**__영어__에서 __점자__로:** ${messageToBrailleResult}`
             }})
@@ -27,21 +27,21 @@ exports.run = (client, message, args) => {
             var brailleToText = args.slice(1).join(" ")
             var brailleToTextResult = braille.toText(`${brailleToText}`)
             message.channel.send({embed: {
-              color: `${int.color}`,
+              color: parseColor(int.color),
               title: '번역',
               description: `**__점자__에서 __영어__로:** ${brailleToTextResult}`
             }})
           }
           translate(`${translateFor}`, {to: `${args[0]}`}).then(res => {
             message.channel.send({embed: {
-              color: `${int.color}`,
+              color: parseColor(int.color),
               title: '번역',
               description: `**__${res.from.language.iso}__에서 __${args[0]}__로:** ${res.text}`
             }})
             return
           }).catch(error => {
             message.channel.send({embed: {
-              color: `${int.color}`,
+              color: parseColor(int.color),
               title: '오류',
               description: `${error}`
             }})
@@ -62,7 +62,7 @@ exports.run = (client, message, args) => {
             var messageToBraille = args.slice(1).join(" ")
             var messageToBrailleResult = braille.toBraille(`${messageToBraille}`)
             message.channel.send({embed: {
-              color: `${int.color}`,
+              color: parseColor(int.color),
               title: 'translate',
               description: `**From __English__ To __Braille__:** ${messageToBrailleResult}`
             }})
@@ -71,7 +71,7 @@ exports.run = (client, message, args) => {
             var brailleToText = args.slice(1).join(" ")
             var brailleToTextResult = braille.toText(`${brailleToText}`)
             message.channel.send({embed: {
-              color: `${int.color}`,
+              color: parseColor(int.color),
               title: 'translate',
               description: `**From __Braille__ to __English__:** ${brailleToTextResult}`
             }})
@@ -79,14 +79,14 @@ exports.run = (client, message, args) => {
           }
           translate(`${translateFor}`, {to: `${args[0]}`}).then(res => {
             message.channel.send({embed: {
-              color: `${int.color}`,
+              color: parseColor(int.color),
               title: 'translate',
               description: `**From __${res.from.language.iso}__ To __${args[0]}__:** ${res.text}`
             }})
             return
           }).catch(error => {
             message.channel.send({embed: {
-              color: `${int.color}`,
+              color: parseColor(int.color),
               title: 'Error',
               description: `${error}`
             }})
