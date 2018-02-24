@@ -6,12 +6,12 @@ exports.run = (client, message, args) => {
     switch (res.from.language.iso) {
       case 'ko':
         message.channel.send({embed: {
-          color: 3447003,
+          color: `${int.color}`,
           title: '질의',
           description: '요청 중..'
         }}).then((ping) => {
           ping.edit({embed: {
-            color: 3447003,
+            color: `${int.color}`,
             title: '질의',
             description: `요청이 반환되었습니다! ${ping.createdTimestamp - message.createdTimestamp}ms가 소요되었습니다.`
           }})
@@ -20,12 +20,12 @@ exports.run = (client, message, args) => {
         break;
       default:
         message.channel.send({embed: {
-          color: 3447003,
+          color: `${int.color}`,
           title: 'ping',
           description: 'Pinging..'
         }}).then((ping) => {
           ping.edit({embed: {
-            color: 3447003,
+            color: `${int.color}`,
             title: 'ping',
             description: `Pong! Took ${ping.createdTimestamp - message.createdTimestamp}ms.`
           }})
