@@ -24,7 +24,7 @@ exports.run = (client, message, args) => {
           .setThumbnail(`${message.author.avatarURL}`)
           .setURL(`${message.author.avatarURL}`)
           .setDescription(`**학생:${message.author.username}**, 쿼드라 매지컬 엔지니어링 퍼실리티 부속 중등교육학교 중학생. (~16세)`)
-      } else if (studentrole && message.member.roles.has(studentrole_first.id)) {
+      } else if (studentrole && message.member.roles.has(studentrole_thrid.id)) {
         var embed = new Discord.RichEmbed()
           .setColor(3447003)
           .setTitle(`${message.author.tag}`)
