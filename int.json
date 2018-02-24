@@ -4,9 +4,8 @@
    "prefix": ";",
 
    "name": "auberant",
-   "description": "© auberant 2018, all rights reserved",
-   "icon": "https://cdn.discordapp.com/app-icons/406881830185467915/aee5e3748f34a0e6d7fd7c70ebfacbf0.png",
-   "site": "https://auberant.tk",
+   "version": "1.2.1.37.268",
+   "build": "268",
    "activity": "https://auberant.tk",
    "permissions": "8",
 

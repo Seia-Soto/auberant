@@ -27,7 +27,7 @@ exports.run = (client, message, args) => {
           /*
            * Inline fields may not display as inline if the thumbnail and/or image is too big.
            */
-          .addField('Auberant 1.2.1 배포판 (2018-02-24)', 'Artwork-if 1.2.1.36.267 빌드 164\nEqualise와 Tree가 2명의 기여자와 함께 개발했습니다!', true)
+          .addField(`Auberant 1.2.1 배포판 (2018-02-24)', 'Artwork-if ${int.version} 빌드 ${int.build}\nEqualise와 Tree가 2명의 기여자와 함께 개발했습니다!`, true)
           /*
            * Blank field, useful to create some space.
            */
@@ -66,7 +66,7 @@ exports.run = (client, message, args) => {
           /*
            * Inline fields may not display as inline if the thumbnail and/or image is too big.
            */
-          .addField('Auberant 1.2.1 distributions (2018-02-21)', 'Artwork-if 1.2.1.34.261 build 164\nDeveloped by Equalise, Tree with 2 contributors!', true)
+          .addField(`Auberant 1.2.1 distributions (2018-02-21)', 'Artwork-if ${int.version} build ${int.build}\nDeveloped by Equalise, Tree with 2 contributors!`, true)
           /*
            * Blank field, useful to create some space.
            */
