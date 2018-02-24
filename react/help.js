@@ -8,7 +8,7 @@ exports.run = (client, message, args) => {
       case 'ko':
         var embed = new Discord.RichEmbed()
           .setTitle('Auberant를 사용 중에 무슨 문제가 있나요?')
-          .setAuthor('Auberant', 'https://cdn.discordapp.com/avatars/410170772599078913/fa88fb40b477af23ec930e7546851ed3.png?size=2048')
+          .setAuthor('Auberant', `${int.avatar}`)
           /*
            * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
            */
@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
           .setDescription(`안녕하세요? Auberant를 사용해주셔서 감사합니다!\n${client.guilds.size}개의 서버들이 Auberant를 채택했으며 현재 200개 이상의 커밋을 기록했답니다!`)
           //.setFooter('FooterText', 'Image_URL')
           .setImage('https://cdn.discordapp.com/attachments/383944646046253056/416347036758048772/let_art_is_new_Artwork.png')
-          .setThumbnail('https://cdn.discordapp.com/avatars/410170772599078913/fa88fb40b477af23ec930e7546851ed3.png?size=2048')
+          .setThumbnail(`${int.avatar}`)
           /*
            * Takes a Date object, defaults to current date.
            */
@@ -27,7 +27,7 @@ exports.run = (client, message, args) => {
           /*
            * Inline fields may not display as inline if the thumbnail and/or image is too big.
            */
-          .addField(`Auberant 1.2.1 배포판 (2018-02-24)', 'Artwork-if ${int.version} 빌드 ${int.build}\nEqualise와 Tree가 2명의 기여자와 함께 개발했습니다!`, true)
+          .addField(`Auberant ${int.version.substring(0, 5)} 배포판 (${int.date})`, `Artwork-if ${int.version} 빌드 ${int.build}\nEqualise와 Tree가 2명의 기여자와 함께 개발했습니다!`, true)
           /*
            * Blank field, useful to create some space.
            */
@@ -66,7 +66,7 @@ exports.run = (client, message, args) => {
           /*
            * Inline fields may not display as inline if the thumbnail and/or image is too big.
            */
-          .addField(`Auberant 1.2.1 distributions (2018-02-21)', 'Artwork-if ${int.version} build ${int.build}\nDeveloped by Equalise, Tree with 2 contributors!`, true)
+          .addField(`Auberant ${int.version.substring(0, 5)} distributions (${int.date})', 'Artwork-if ${int.version} build ${int.build}\nDeveloped by Equalise, Tree with 2 contributors!`, true)
           /*
            * Blank field, useful to create some space.
            */
