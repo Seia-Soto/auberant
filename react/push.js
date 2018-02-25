@@ -1,18 +1,9 @@
 exports.run = (client, message, args) => {
-  if (!args[0].includes('what:')) {
-    return
-  } else {
-    let messageToPush = args.slice(1).join(' ')
-    switch (args[0].replace('what:', '')) {
-      case 'partnerships':
-        client.channels.get('416448554945478666').send({embed: {
-          color: 4620980,
-          title: 'New partnerships',
-          description: `${args.slice(3).join(' ')}\n[${args.slice(1).join(' ').replace('name:', '')}](${args[2].replace('link', '')})`
-        }})
-        break;
-    }
-  }
+  client.channels.get('416448554945478666').send({embed: {
+    color: 4620980,
+    title: `${args[0]}`,
+    description: `${args.slice(1).join(' ')}`
+  }})
 }
 
 exports.conf = {
