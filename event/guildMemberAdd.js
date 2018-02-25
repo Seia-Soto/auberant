@@ -1,6 +1,4 @@
 module.exports = (client, member) => {
-  const guild = member.guild
-  const channel = guild.channels.find(c=> c.permissionsFor(guild.me).has('SEND_MESSAGES'))
   if (member.guild.id === '383944425648422912') {
     client.channels.get(416448554945478666).send({embed: {
       color: 3447003,
@@ -9,6 +7,8 @@ module.exports = (client, member) => {
     }})
     return
   }
+  const guild = member.guild
+  const channel = guild.channels.find(c=> c.permissionsFor(guild.me).has('SEND_MESSAGES'))
   channel.send({embed: {
     color: 3447003,
     title: 'New member!',
