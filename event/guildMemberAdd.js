@@ -1,4 +1,4 @@
-module.exports = (client, member) => {
+module.exports = member => {
   if (member.guild.id === '383944425648422912') {
     client.channels.get(416448554945478666).send({embed: {
       color: 3447003,
