@@ -2,14 +2,14 @@ const Discord = require('discord.js')
 exports.run = (client, message, args) => {
   switch (message.content) {
     case ';학생증':
-    let teacherrole = message.guild.roles.find('name', '교수')
-    let adminrole = message.guild.roles.find('name', '교장')
-    let studentrole = message.guild.roles.find('name', '학생')
-    let moneypersonrole = message.guild.roles.find('name', '이사장')
+    var teacherrole = message.guild.roles.find('name', '교수')
+    var adminrole = message.guild.roles.find('name', '교장')
+    var studentrole = message.guild.roles.find('name', '학생')
+    var moneypersonrole = message.guild.roles.find('name', '이사장')
     if (studentrole && message.member.roles.has(studentrole.id)) {
-      let studentrole_first = message.guild.roles.find('name', '초등학생')
-      let studentrole_second = message.guild.roles.find('name', '중학생')
-      let studentrole_thrid = message.guild.roles.find('name', '고등학생')
+      var studentrole_first = message.guild.roles.find('name', '초등학생')
+      var studentrole_second = message.guild.roles.find('name', '중학생')
+      var studentrole_thrid = message.guild.roles.find('name', '고등학생')
       if (studentrole && message.member.roles.has(studentrole_first.id)) {
         var embed = new Discord.RichEmbed()
           .setColor(4620980)
@@ -57,14 +57,14 @@ exports.run = (client, message, args) => {
     message.channel.send({embed})
       break;
     case ';민증':
-      let teacherrole = message.guild.roles.find('name', '교수')
-      let adminrole = message.guild.roles.find('name', '교장')
-      let studentrole = message.guild.roles.find('name', '학생')
-      let moneypersonrole = message.guild.roles.find('name', '이사장')
+      var teacherrole = message.guild.roles.find('name', '교수')
+      var adminrole = message.guild.roles.find('name', '교장')
+      var studentrole = message.guild.roles.find('name', '학생')
+      var moneypersonrole = message.guild.roles.find('name', '이사장')
       if (studentrole && message.member.roles.has(studentrole.id)) {
-        let studentrole_first = message.guild.roles.find('name', '초등학생')
-        let studentrole_second = message.guild.roles.find('name', '중학생')
-        let studentrole_thrid = message.guild.roles.find('name', '고등학생')
+        var studentrole_first = message.guild.roles.find('name', '초등학생')
+        var studentrole_second = message.guild.roles.find('name', '중학생')
+        var studentrole_thrid = message.guild.roles.find('name', '고등학생')
         if (studentrole && message.member.roles.has(studentrole_first.id)) {
           var embed = new Discord.RichEmbed()
             .setColor(4620980)
