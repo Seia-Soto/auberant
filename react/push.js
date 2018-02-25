@@ -5,7 +5,6 @@ exports.run = (client, message, args) => {
     let messageToPush = args.slice(1).join(' ')
     switch (args[0].replace('what:', '')) {
       case 'notificate':
-        const guild = member.guild
         const channel = guild.channels.find(c=> c.permissionsFor(guild.me).has('SEND_MESSAGES'))
         client.guilds.array.forEach(channel => {
           message.channel.send({embed: {
