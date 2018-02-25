@@ -4,18 +4,8 @@ exports.run = (client, message, args) => {
   } else {
     let messageToPush = args.slice(1).join(' ')
     switch (args[0].replace('what:', '')) {
-      case 'notificate':
-        const channel = guild.channels.find(c=> c.permissionsFor(guild.me).has('SEND_MESSAGES'))
-        client.guilds.array.forEach(channel => {
-          message.channel.send({embed: {
-            color: 4620980,
-            title: 'Notificate',
-            description: `${messageToPush}`
-          }})
-        })
-        break;
       case 'partnerships':
-        client.channels.get(416448554945478666).send({embed: {
+        client.channels.get('416448554945478666').send({embed: {
           color: 4620980,
           title: 'New partnerships',
           description: `${args.slice(3).join(' ')}\n[${args.slice(1).join(' ').replace('name:', '')}](${args[2].replace('link', '')})`
