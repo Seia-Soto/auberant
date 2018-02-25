@@ -1,8 +1,10 @@
 exports.run = (client, message, args) => {
-  client.channels.get('416448554945478666').send({embed: {
+  client.channels.get('416448554945478666').send({
+    to: 416448554945478666,
+    embed: {
     color: 4620980,
-    title: `${args[0]}`,
-    description: `${args.slice(1).join(' ')}`
+    title: `${args.slice(0).join(' ').split('_content:')[0]}`,
+    description: `${args.slice(0).join(' ').split('_content:')[1]}`
   }})
 }
 
