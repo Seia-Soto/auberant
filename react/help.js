@@ -13,7 +13,8 @@ exports.run = (client, message, args) => {
            * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
            */
           .setColor(4620980)
-          .setDescription(`안녕하세요? Auberant를 사용해주셔서 감사합니다!\n${client.guilds.size}개의 서버들이 Auberant를 채택했으며 현재 200개 이상의 커밋을 기록했답니다!`)
+          .setDescription(`안녕하세요? Auberant를 사용해주셔서 감사합니다!\n${client.guilds.size}개의 서버들이 Auberant를 채택했으며 현재 200개 이상의 커밋을 기록했답니다!
+            \n[artwork-if 서버에 가입하고 Auberant 초대하기](https://discord.gg/rkqN6Be)`)
           //.setFooter('FooterText', 'Image_URL')
           .setImage('https://cdn.discordapp.com/attachments/383944646046253056/416347036758048772/let_art_is_new_Artwork.png')
           .setThumbnail(`${int.avatar}`)
@@ -21,9 +22,9 @@ exports.run = (client, message, args) => {
            * Takes a Date object, defaults to current date.
            */
           //.setTimestamp()
-          .setURL('https://discord.gg/dtaEjNA')
+          .setURL('https://discord.gg/rkqN6Be')
           .addField('노트',
-            '현재 저희 서버는 설정 중에 있습니다. 웹페이지가 정상적으로 작동하지 않을 수 있으니 주의해주세요!')
+            'Auberant의 권한 수준 설정을 다시 설정하고 있습니다...')
           /*
            * Inline fields may not display as inline if the thumbnail and/or image is too big.
            */
@@ -60,13 +61,14 @@ exports.run = (client, message, args) => {
            * Takes a Date object, defaults to current date.
            */
           //.setTimestamp()
-          .setURL('https://discord.gg/dtaEjNA')
+          .setURL('https://discord.gg/rkqN6Be')
           .addField('Note',
-            'Our server is configuring some stuffs. The website may not work.')
+            'Configuring permission level system..')
           /*
            * Inline fields may not display as inline if the thumbnail and/or image is too big.
            */
-          .addField(`Auberant ${int.version.substring(0, 5)} distributions (${int.date})`, `Artwork-if ${int.version} build ${int.build}\nDeveloped by Equalise, Tree with 2 contributors!`, true)
+          .addField(`Auberant ${int.version.substring(0, 5)} distributions (${int.date})`, `Artwork-if ${int.version} build ${int.build}\nDeveloped by Equalise, Tree with 2 contributors!
+            \n[Goto artwork-if server and invite Auberant!](https://discord.gg/rkqN6Be)`, true)
           /*
            * Blank field, useful to create some space.
            */

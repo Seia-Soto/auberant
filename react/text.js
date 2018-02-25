@@ -1,21 +1,3 @@
-
-exports.run = (client, message, args) => {
-
-}
-
-exports.conf = {
-  enabled: true,
-  guildOnly: true,
-  aliases: ['텍스트'],
-  permLevel: 0
-}
-
-exports.help = {
-  name: 'text',
-  description: 'Print text to ascii artwork',
-  usage: 'text <word>'
-}
-
 const figlet = require('figlet')
 const translate = require('google-translate-api')
 const int = require('../int.json')
@@ -71,4 +53,17 @@ exports.run = (client, message, args) => {
         break;
     }
   })
+}
+
+exports.conf = {
+  enabled: true,
+  guildOnly: true,
+  aliases: ['텍스트'],
+  permLevel: 0
+}
+
+exports.help = {
+  name: 'text',
+  description: 'Print text to ascii artwork',
+  usage: 'text <word>'
 }

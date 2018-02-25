@@ -15,7 +15,13 @@ module.exports = message => {
     rct = client.reacts.get(client.aliases.get(react))
   }
   if (rct) {
-    if (perms < rct.conf.permLevel) return
+    if (perms !== rct.conf.permLevel) {
+      if (perms !== 'administrator') {
+        return
+      } else {
+
+      }
+    }
     rct.run(client, message, args, perms)
   }
 }
