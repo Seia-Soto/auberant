@@ -35,5 +35,5 @@ client.elevation = (message, guild) => {
 
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 
-client.login(int.token)
-client.destroy().then(() => client.login(int.token))
+client.login(process.env.token)
+client.destroy().then(() => client.login(process.env.token))

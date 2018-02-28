@@ -68,7 +68,7 @@ exports.run = (client, message, args) => {
            * Inline fields may not display as inline if the thumbnail and/or image is too big.
            */
           .addField(`Auberant ${int.version.substring(0, 5)} distributions (${int.date})`, `Artwork-if ${int.version} build ${int.build}\nDeveloped by Equalise, Tree with 2 contributors!
-            \n[Goto artwork-if server and invite Auberant!](https://discord.gg/rkqN6Be)`, true)
+            \n[Goto artwork-if server and invite Auberant!](https://discord.gg/YzBZNQq)`, true)
           /*
            * Blank field, useful to create some space.
            */

@@ -4,11 +4,12 @@ module.exports = client => {
 
   client.user.setActivity(`${int.activity}`)
   console.log(`Client user activity setted as ${int.activity}`)
+  console.log(`${client.users.size} users in ${client.guilds.size} servers`)
 
   // Discord Bot List Patch
   const DBL = require("dblapi.js")
   const dbl = new DBL(process.env.dbl_token)
   setInterval(() => {
     dbl.postStats(client.guilds.size);
-  }, 90000);
+  }, 900000);
 }
