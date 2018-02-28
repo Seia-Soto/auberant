@@ -23,36 +23,17 @@ fs.readdir('./react/', (error, reactFiles) => {
   })
 })
 
-client.reload = command => {
-  return new Promise((resolve, reject) => {
-    try {
-      delete require.cache[require.resolve(`./react/${command}`)]
-      let rct = require(`./react/${command}`)
-      client.commands.delete(command)
-      client.aliases.forEach((rct, alias) => {
-        if (rct === command) client.aliases.delete(alias);
-      })
-      client.commands.set(command, rct)
-      rct.conf.aliases.forEach(alias => {
-        client.aliases.set(alias, rct.help.name)
-      })
-      resolve()
-    } catch (error){
-      reject(error)
-    }
-  })
-}
-
 client.elevation = (message, guild) => {
-  let permlvl = 'everyone'
+  let permlvl = 0
+
+  if (message.member.roles.has(416965047651139595)) permlvl = 2
   let moderator_role = message.guild.roles.find('name', `${int.moderator_rolename}`)
-  if (moderator_role && message.member.roles.has(moderator_role.id)) permlvl = 'moderator'
-  if (message.member.roles.has(416965047651139595)) permlvl = 'partners'
-  if (message.author.id === int.ownerid && message.member.roles.has(416327989287190558)) permlvl = 'administrator'
+  if (moderator_role && message.member.roles.has(moderator_role.id)) permlvl = 3
+  if (message.author.id === int.ownerid && message.member.roles.has(416327989287190558)) permlvl = 4
   return permlvl
 }
 
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 
-client.login(process.env.token)
-client.destroy().then(() => client.login(process.env.token))
+client.login(int.token)
+client.destroy().then(() => client.login(int.token))

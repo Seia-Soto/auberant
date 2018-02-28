@@ -14,7 +14,7 @@ exports.run = (client, message, args) => {
            */
           .setColor(4620980)
           .setDescription(`안녕하세요? Auberant를 사용해주셔서 감사합니다!\n${client.guilds.size}개의 서버들이 Auberant를 채택했으며 현재 200개 이상의 커밋을 기록했답니다!
-            \n[artwork-if 서버에 가입하고 Auberant 초대하기](https://discord.gg/rkqN6Be)`)
+            \n[artwork-if 서버에 가입하고 Auberant 초대하기](https://discord.gg/YzBZNQq)`)
           //.setFooter('FooterText', 'Image_URL')
           .setImage('https://cdn.discordapp.com/attachments/383944646046253056/416347036758048772/let_art_is_new_Artwork.png')
           .setThumbnail(`${int.avatar}`)
@@ -23,8 +23,8 @@ exports.run = (client, message, args) => {
            */
           //.setTimestamp()
           .setURL('https://discord.gg/rkqN6Be')
-          .addField('노트',
-            'Auberant의 권한 수준 설정을 다시 설정하고 있습니다...')
+          .addField('팁',
+            '__**서버에서 Auberant의 알림을 받고 싶다면 #push 채널을 추가하고 Auberant에게 액세스할 수 있는 권한을 부여해주세요!**__')
           /*
            * Inline fields may not display as inline if the thumbnail and/or image is too big.
            */
@@ -61,9 +61,9 @@ exports.run = (client, message, args) => {
            * Takes a Date object, defaults to current date.
            */
           //.setTimestamp()
-          .setURL('https://discord.gg/rkqN6Be')
-          .addField('Note',
-            'Configuring permission level system..')
+          .setURL('https://discord.gg/YzBZNQq')
+          .addField('Tip',
+            '__**If you want to listen the Auberant and artwork-if notifications, make sure the channel #push available for Auberant!**__')
           /*
            * Inline fields may not display as inline if the thumbnail and/or image is too big.
            */
