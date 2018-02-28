@@ -6,7 +6,7 @@
 </br>
 
 #### Is there any issues with **Auberant**?
-[Support server](https://discord.gg/rkqN6Be) ``rkqN6Be``
+[Support server](https://discord.gg/YzBZNQq) ``YzBZNQq``
 </br>
 [Website](https://auberant.tk)
 
