@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
   switch (args[0]) {
     case 'reset':
       if (!message.author.bot && message.author.tag === 'Let#5959') {
-        story.set('story', '이 페이지의 첫번째 줄이네요. 항상 첫번째 줄은 어딘가 특별해보이지 않나요?\n네?! 흐에... ㅠㅠ')
+        story.set('story', 'Let, 悲しい そして 平凡な ツンデレ 学生。\n私はあなたが最初の行に特別な何かを書くことを願っています...！')
         message.reply('다음장으로 조용히 넘겼답니다..')
       }
       break;
