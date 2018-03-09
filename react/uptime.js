@@ -18,14 +18,14 @@ exports.run = (client, message, args) => {
         message.channel.send({embed: {
               color: 4620980,
               title: '업타임',
-              description: `${process.env}`
+              description: `${process.uptime()}`
             }})
         break;
       default:
         message.channel.send({embed: {
               color: 4620980,
               title: 'uptime',
-              description: `${process.uptime}`
+              description: `${process.uptime()}`
             }})
         break;
     }
