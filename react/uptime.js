@@ -2,6 +2,16 @@ const translate = require('google-translate-api')
 const int = require('../int.json')
 exports.run = (client, message, args) => {
   const react = message.content.split(' ')[0].slice(int.prefix.length)
+  format(seconds) => {
+  pad(s) => {
+    return (s < 10 ? '0' : '') + s;
+  }
+  var hours = Math.floor(seconds / (60*60));
+  var minutes = Math.floor(seconds % (60*60) / 60);
+  var seconds = Math.floor(seconds % 60);
+
+  return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
+}
   translate(react, {to: 'en'}).then(res => {
     switch (res.from.language.iso) {
       case 'ko':
