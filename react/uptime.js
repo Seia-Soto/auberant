@@ -8,14 +8,14 @@ exports.run = (client, message, args) => {
         message.channel.send({embed: {
               color: 4620980,
               title: '업타임',
-              description: `${uptime} 초`
+              description: `${process.uptime} 초`
             }})
         break;
       default:
         message.channel.send({embed: {
               color: 4620980,
               title: 'uptime',
-              description: `${uptime} second`
+              description: `${process.uptime} second`
             }})
         break;
     }
