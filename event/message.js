@@ -7,7 +7,7 @@ module.exports = message => {
     var responses = [
       '안녕? 세이아라고 해', '난 사쿠라 고등학원 2학년 E반 14번, 세이아 사카이자와(せいあ さかいざわ).',
       '난 세이아 사카이자와.', '여행을 떠나요..!', '만나서 반가워', '너 덕분에 힘이 났어..!', 'ㅠㅠ',
-      '헉..?', '인사 고마워'
+      '헉..?', '인사 고마워', '안녕?', '좋은 하루'
     ]
     if (message.content.match(/때문/)) {
       if (message.content.match(/힘/)) {
@@ -49,6 +49,11 @@ module.exports = message => {
            '그건 또 왜', '나 잘 틩겨', '잘 알아봐', '왜요', '좋은 사랑해', '겨울이한테 물어봐', '박제헌한테 물어봐', '별빛한테 물어봐'
         ]
       }
+    } else if (message.content.endsWith('어때')) {
+      var responses = [
+        '절대로 만나지 말 것', '죽을 수도 있음', '그냥', 'SOSO', '도움을 요청해야 할 때다', '모르겠다', '그렇네', '그렇군', '그렇다', '정답이야',
+        '인생의 정답.', '좋은데?', '시러', '싫어', '싫다고'
+      ]
     }
     message.channel.send(`${responses[Math.floor(Math.random() * responses.length)]}`)
     return
