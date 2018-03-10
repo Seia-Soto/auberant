@@ -1,4 +1,5 @@
 ### Translate in Discord anywhere when you want!
+#### The token was leaked but I refreshed! Sorry about messages.. :(
 # Auberant
 * * *
 
