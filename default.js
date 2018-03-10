@@ -26,6 +26,7 @@ fs.readdir('./react/', (error, reactFiles) => {
 client.elevation = (message, guild) => {
   let permlvl = 0
 
+  if (message.member.roles.has(416965047651139595)) permlvl = 2
   let moderator_role = message.guild.roles.find('name', `${int.moderator_rolename}`)
   if (moderator_role && message.member.roles.has(moderator_role.id)) permlvl = 3
   if (message.author.id === int.ownerid && message.member.roles.has(416327989287190558)) permlvl = 4
