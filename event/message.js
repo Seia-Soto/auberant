@@ -2,7 +2,7 @@ const int = require('../int.json')
 module.exports = message => {
   if (message.author.bot) return
   let client = message.client
-  if (!message.content.startsWith(int.prefix)) return
+  //if (!message.content.startsWith(int.prefix)) return
 
   let react = message.content.split(' ')[0].slice(int.prefix.length)
   let args = message.content.split(' ').slice(1)

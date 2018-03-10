@@ -6,11 +6,11 @@ exports.run = (client, message, args) => {
   translate(react, {to: 'en'}).then(res => {
     switch (res.from.language.iso) {
       case 'ko':
-        if (!toCalculate && isNaN(toCalculate) == true) {
+        if (toCalculate == undefined && isNaN(toCalculate) == true) {
           message.channel.send({embed: {
             color: 4620980,
             title: '연산',
-            description: '주어진 수를 계산합니다. 인수는 숫자로 이루어진 계산할 공식입니다.\n\n다음과 같이 사용할 수 있습니다.\n`;연산 1+1`'
+            description: '주어진 수를 계산합니다. 인수는 숫자로 이루어진 계산할 공식입니다.\n\n다음과 같이 사용할 수 있습니다.\n`;연산 5*25`'
           }})
           return
         }
@@ -18,18 +18,15 @@ exports.run = (client, message, args) => {
           var firstInt = toCalculate.split('+')[0]
           var secondInt = toCalculate.split('+')[1]
           var calculateResult = firstInt + secondInt
-        }
-        if (toCalculate.includes('-')) {
+        } else if (toCalculate.includes('-')) {
           var firstInt = toCalculate.split('/')[0]
           var secondInt = toCalculate.split('/')[1]
           var calculateResult = firstInt - secondInt
-        }
-        if (toCalculate.includes('/')) {
+        } else if (toCalculate.includes('/')) {
           var firstInt = toCalculate.split('/')[0]
           var secondInt = toCalculate.split('/')[1]
           var calculateResult = firstInt / secondInt
-        }
-        if (toCalculate.includes('*')) {
+        } else if (toCalculate.includes('*')) {
           var firstInt = toCalculate.split('*')[0]
           var secondInt = toCalculate.split('*')[1]
           var calculateResult = firstInt / secondInt
@@ -42,7 +39,37 @@ exports.run = (client, message, args) => {
         }})
         break;
       default:
+        if (toCalculate == undefined && isNaN(toCalculate) == true) {
+          message.channel.send({embed: {
+            color: 4620980,
+            title: 'calculate',
+            description: '주어진 수를 계산합니다. 인수는 숫자로 이루어진 계산할 공식입니다.\n\n다음과 같이 사용할 수 있습니다.\n`;연산 5*25`'
+          }})
+          return
+        }
+        if (toCalculate.includes('+')) {
+          var firstInt = toCalculate.split('+')[0]
+          var secondInt = toCalculate.split('+')[1]
+          var calculateResult = firstInt + secondInt
+        } else if (toCalculate.includes('-')) {
+          var firstInt = toCalculate.split('/')[0]
+          var secondInt = toCalculate.split('/')[1]
+          var calculateResult = firstInt - secondInt
+        } else if (toCalculate.includes('/')) {
+          var firstInt = toCalculate.split('/')[0]
+          var secondInt = toCalculate.split('/')[1]
+          var calculateResult = firstInt / secondInt
+        } else if (toCalculate.includes('*')) {
+          var firstInt = toCalculate.split('*')[0]
+          var secondInt = toCalculate.split('*')[1]
+          var calculateResult = firstInt / secondInt
+        }
 
+        message.channel.send({embed: {
+          color: 4620980,
+          title: 'calculate',
+          description: `**__${toCalculate}__에 대한 결과값:** ${calculateResult}`
+        }})
         break;
     }
   })
