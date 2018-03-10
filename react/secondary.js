@@ -26,7 +26,7 @@ exports.run = (client, message, args) => {
       ]
     }
   }
-  if (message.content.startsWith('세이아 도와줘')) {
+  if (message.content.includes('세이아 도와줘')) {
     if (message.content.includes('제발')) {
       var responses = [
          '싫어', '내가 알기 싫어서', '그냥', '왜 그래', '혹시 나한테 관심있니', '데헷 안 알려줄건데', '내가 왜', '오늘 하루를 그냥 지금 마무리하자',
