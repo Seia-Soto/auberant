@@ -52,7 +52,7 @@ exports.run = (client, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: [],
+  aliases: ['세이아'],
   permLevel: 0
 }
 
