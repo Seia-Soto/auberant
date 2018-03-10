@@ -30,8 +30,7 @@ module.exports = message => {
           '여행..', '여행 좋지', '여행 좋은데?', '정말로?', '진짜로?', '가는거야?', '정말로 가는 구나.. ', '사진 많이 찍어와야 해.'
         ]
       }
-    }
-    if (message.content.match(/도와/)) {
+    } else if (message.content.match(/도와/)) {
       if (message.content.match(/제발/)) {
         var responses = [
            '싫어', '내가 알기 싫어서', '그냥', '왜 그래', '혹시 나한테 관심있니', '데헷 안 알려줄건데', '내가 왜', '오늘 하루를 그냥 지금 마무리하자',
