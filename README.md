@@ -9,7 +9,7 @@
 #### Is there any issues with **Auberant**?
 [Support server](https://discord.gg/YzBZNQq) ``YzBZNQq``
 </br>
-[Website](https://auberant.tk)
+[Website](https://artwork-if.tk)
 
 </br>
 </br>
@@ -53,6 +53,13 @@ Returns ASCii Art!
 
 </br>
 
+5. **Whois**
+``;whois <domain-name>`` </br></br>
+Query domain-name information form whois databases.
+</br>
+
+</br>
+
 4. **Avatar**
 ``;avatar`` </br></br>
 Load your profile picture!
@@ -70,6 +77,8 @@ Load your profile picture!
 - ASCii added
 - Note added
 - Avatar added
+- Whois added
+- 
 ```
 ``1.1.4`` __Deprecated__
 ```md
