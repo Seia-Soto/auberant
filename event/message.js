@@ -9,7 +9,7 @@ module.exports = message => {
       '난 세이아 사카이자와.', '여행을 떠나요..!', '만나서 반가워', '너 덕분에 힘이 났어..!', 'ㅠㅠ',
       '헉..?', '인사 고마워'
     ]
-    if (message.content.match(/하잖/) && message.content.match(/때문/)) {
+    if (message.content.match(/때문/)) {
       if (message.content.match(/힘/)) {
         var responses = [
           '힘들어?', '내가 ~~안~~도와줄게', '나 힘 약해서 못 도와줘', '미안. 유감이야~', '별빛팸 ㄱㅈㅇ', '그러니깐 말이야'
