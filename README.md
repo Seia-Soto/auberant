@@ -53,16 +53,30 @@ Returns ASCii Art!
 
 </br>
 
-5. **Whois**
+6. **Whois**
 ``;whois <domain-name>`` </br></br>
 Query domain-name information form whois databases.
 </br>
 
 </br>
 
-4. **Avatar**
+7. **Avatar**
 ``;avatar`` </br></br>
 Load your profile picture!
+</br>
+
+</br>
+
+8. **연산 (Calculations, available for Korean and testing now)**
+``;연산 <공식>`` </br></br>
+지금 계산해보세요!
+</br>
+
+</br>
+
+9. **let (TextLogs! This is for only devs and using Korean)**
+``;let`` </br></br>
+봇에 피드백이나 메모 남기고 가세요 ㅎㅎ
 </br>
 
 </br>
