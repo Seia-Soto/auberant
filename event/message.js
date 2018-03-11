@@ -2,7 +2,7 @@ const int = require('../int.json')
 module.exports = message => {
   if (message.author.bot) return
   let client = message.client
-  if (message.content.match(/세이아/)) {
+  if (message.content.startsWith('세이아')) {
     // Secondary
     var responses = [
       '안녕? 세이아라고 해', '난 사쿠라 고등학원 2학년 E반 14번, 세이아 사카이자와(せいあ さかいざわ).',
