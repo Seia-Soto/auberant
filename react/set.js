@@ -1,5 +1,4 @@
 const translate = require('google-translate-api')
-const braille = require('braille')
 const int = require('../int.json')
 exports.run = (client, message, args) => {
   const react = message.content.split(' ')[0].slice(int.prefix.length)
