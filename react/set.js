@@ -9,6 +9,10 @@ exports.run = (client, message, args) => {
       console.log(`Client user's activity setted to **${setValueTo}**.`)
       message.reply(`Client user's activity setted to **${setValueTo}**.`)
       break;
+    case 'name':
+      client.user.setNickname(`${setValueTo}`)
+      console.log(`Client user's nickname setted to **${setValueTo}**.`)
+      message.reply(`Client user's nickname setted to **${setValueTo}**.`)
     default:
       message.reply('No entries')
       break;
