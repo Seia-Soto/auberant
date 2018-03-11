@@ -10,9 +10,14 @@ exports.run = (client, message, args) => {
       message.reply(`Client user's activity setted to **${setValueTo}**.`)
       break;
     case 'name':
-      client.user.setNickname(`${setValueTo}`)
-      console.log(`Client user's nickname setted to **${setValueTo}**.`)
-      message.reply(`Client user's nickname setted to **${setValueTo}**.`)
+      client.setNickname(`${setValueTo}`)
+      if (message.guild.members.get(client.user.id).hasPermission('MANAGE_NICKNAMES') && message.guild.members.get(client.user.id).hasPermission('CHANGE_NICKNAME')) {
+        message.guild.members.get(client.user.id).setNickname(`${setValueTo}`)
+        console.log(`Client user's nickname setted to **${setValueTo}**.`)
+        message.reply(`Client's nickname setted to **${setValueTo}**.`)
+      } else {
+        message.reply('I dont have the permissons to change my nickname in this server.')
+      }
     default:
       message.reply('No entries')
       break;
