@@ -23,8 +23,6 @@ exports.run = (client, message, args) => {
            */
           //.setTimestamp()
           .setURL('https://discord.gg/rkqN6Be')
-          .addField('팁',
-            '__**서버에서 Auberant의 알림을 받고 싶다면 #push 채널을 추가하고 Auberant에게 액세스할 수 있는 권한을 부여해주세요!**__')
           /*
            * Inline fields may not display as inline if the thumbnail and/or image is too big.
            */
@@ -62,8 +60,6 @@ exports.run = (client, message, args) => {
            */
           //.setTimestamp()
           .setURL('https://discord.gg/YzBZNQq')
-          .addField('Tip',
-            '__**If you want to listen the Auberant and artwork-if notifications, make sure the channel #push available for Auberant!**__')
           /*
            * Inline fields may not display as inline if the thumbnail and/or image is too big.
            */

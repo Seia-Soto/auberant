@@ -28,7 +28,7 @@ exports.run = (client, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ['프로필'],
+  aliases: ['아바타'],
   permLevel: 0
 }
 
