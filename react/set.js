@@ -1,4 +1,3 @@
-const translate = require('google-translate-api')
 const int = require('../int.json')
 exports.run = (client, message, args) => {
   const react = message.content.split(' ')[0].slice(int.prefix.length)
@@ -8,6 +7,11 @@ exports.run = (client, message, args) => {
       client.user.setActivity(`${setValueTo}`)
       console.log(`Client user's activity setted to **${setValueTo}**.`)
       message.reply(`Client user's activity setted to **${setValueTo}**.`)
+      break;
+    case 'nickname':
+      client.user.setNickname(`${setValueTo}`)
+      console.log(`Client user's nickname setted to **${setValueTo}**.`)
+      message.reply(`Client user's nickname setted to **${setValueTo}**.`)
       break;
     default:
       message.reply('No entries')
