@@ -5,7 +5,6 @@ const client = new Discord.Client()
 const fs = require('fs')
 
 require('./handler/eventLoader')(client)
-require('./handler/secondary')(client)
 const int = require('./int.json')
 
 client.reacts = new Discord.Collection()
