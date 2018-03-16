@@ -1,5 +1,4 @@
 ### Translate in Discord anywhere when you want!
-#### The token was leaked but I refreshed! Sorry about messages.. :(
 # Auberant
 * * *
 
@@ -9,7 +8,7 @@
 #### Is there any issues with **Auberant**?
 [Support server](https://discord.gg/YzBZNQq) ``YzBZNQq``
 </br>
-[Website](https://artwork-if.tk)
+[Website](https://artwork-if.tk) ``https://artwork-if.tk``
 
 </br>
 </br>
@@ -46,8 +45,8 @@ Open Auberant's help documentation.
 
 </br>
 
-5. **Text**
-``;text <string>`` </br></br>
+5. **Ascii (English Only)**
+``;ascii <string>`` </br></br>
 Returns ASCii Art!
 </br>
 
@@ -67,21 +66,6 @@ Load your profile picture!
 
 </br>
 
-8. **연산 (Calculations, available for Korean and testing now)**
-``;연산 <공식>`` </br></br>
-지금 계산해보세요!
-</br>
-
-</br>
-
-9. **let (TextLogs! This is for only devs and using Korean)**
-``;let`` </br></br>
-봇에 피드백이나 메모 남기고 가세요 ㅎㅎ
-</br>
-
-</br>
-</br>
-
 #### Updates
 * * *
 ``1.2.1`` __Distributed__
@@ -92,7 +76,7 @@ Load your profile picture!
 - Note added
 - Avatar added
 - Whois added
-- 
+-
 ```
 ``1.1.4`` __Deprecated__
 ```md
