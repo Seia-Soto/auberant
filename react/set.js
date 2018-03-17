@@ -1,12 +1,15 @@
-const int = require('../int.json')
-exports.run = (client, message, args) => {
-  const react = message.content.split(' ')[0].slice(int.prefix.length)
+exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
   var setValueTo = args.slice(1).join(" ")
   switch(args[0]) {
     case 'activity':
       client.user.setActivity(`${setValueTo}`)
       console.log(`Client user's activity setted to **${setValueTo}**.`)
       message.reply(`Client user's activity setted to **${setValueTo}**.`)
+      break;
+    case 'restart':
+      console.log(`Restarting at ${new Date()}`)
+      message.reply(`Restarting at ${new Date()}`)
+      process.exit(0)
       break;
     default:
       message.reply('No entries')
@@ -23,6 +26,6 @@ exports.conf = {
 
 exports.help = {
   name: 'set',
-  description: 'Configure bot settings',
+  description: 'Bot configuration tool.',
   usage: 'set <topic> <value>'
 }
