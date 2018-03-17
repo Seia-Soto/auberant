@@ -7,13 +7,13 @@ exports.run = (client, message, args) => {
   translate(react, {to: 'en'}).then(res => {
     switch (res.from.language.iso) {
       case 'ko':
-        var embedTitle = '아스키'
-        var informationContent = 'ASCii 문자열을 전송합니다. 인수는 영문 문자열입니다.'
+        var messageTitle = '아스키'
+        var messageContent = 'ASCii 문자열을 전송합니다. 인수는 영문 문자열입니다.'
         var errorTitle = '오류'
         break;
       default:
-        var embedTitle = 'ascii'
-        var informationContent = 'Send ASCii artworks. Argument is string.'
+        var messageTitle = 'ascii'
+        var messageContent = 'Send ASCii artworks. Argument is string.'
         var errorTitle = 'Error'
         break;
     }
@@ -21,8 +21,8 @@ exports.run = (client, message, args) => {
   if (!args[0]) {
     message.channel.send({embed: {
       color: 4620980,
-      title: `${embedTitle}`,
-      description: `${embedContent}`
+      title: `${messageTitle}`,
+      description: `${messageContent}`
     }})
     return
   }
