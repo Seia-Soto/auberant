@@ -19,7 +19,6 @@ exports.run = (client, message, args) => {
     .setImage(`${message.author.avatarURL}`)
     .setURL(`${message.author.avatarURL}`)
   message.channel.send({embed})
-  break;
 }
 
 exports.conf = {
