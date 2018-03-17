@@ -3,55 +3,40 @@ const translate = require('google-translate-api')
 const int = require('../int.json')
 exports.run = (client, message, args) => {
   const react = message.content.split(' ')[0].slice(int.prefix.length)
+  var messageToASCii = args.slice(0).join(' ')
   translate(react, {to: 'en'}).then(res => {
     switch (res.from.language.iso) {
       case 'ko':
-        if (!args[0]) {
-          message.channel.send({embed: {
-            color: 4620980,
-            title: '아스키',
-            description: `ASCii 문자열을 전송합니다. 인수는 문자열입니다.`
-          }})
-          return
-        }
-        var messageToASCii = args.slice(0).join(' ')
-        figlet.text(`${messageToASCii}`, (error, data) => {
-          if (error) {
-            console.error(error)
-            message.channel.send({embed: {
-              color: 4620980,
-              title: '오류',
-              description: `${error}`
-            }})
-            return
-          }
-          message.channel.send('```' + data + '```')
-        })
+        var informationTitle = '아스키'
+        var informationContent = 'ASCii 문자열을 전송합니다. 인수는 영문 문자열입니다.'
+        var errorTitle = '오류'
         break;
       default:
-        if (!args[0]) {
-          message.channel.send({embed: {
-            color: 4620980,
-            title: 'ascii',
-            description: `Send ASCii text. Argument is string.`
-          }})
-          return
-        }
-        var messageToASCii = args.slice(0).join(' ')
-        figlet.text(`${messageToASCii}`, (error, data) => {
-          if (error) {
-            console.error(error)
-            message.channel.send({embed: {
-              color: 4620980,
-              title: 'Error',
-              description: `${error}`
-            }})
-            return
-          }
-          message.channel.send('```' + data + '```')
-        })
+        var informationTitle = 'ascii'
+        var informationContent = 'Send ASCii artworks. Argument is string.'
+        var errorTitle = 'Error'
         break;
     }
+  })
+  if (!args[0]) {
+    message.channel.send({embed: {
+      color: 4620980,
+      title: `${informationTitle}`,
+      description: `${informationContent}`
+    }})
+    return
+  }
+  figlet.text(`${messageToASCii}`, (error, data) => {
+    if (error) {
+      console.error(error)
+      message.channel.send({embed: {
+        color: 4620980,
+        title: `${errorTitle}`,
+        description: `${error}`
+      }})
+      return
+    }
+    message.channel.send('```' + data + '```')
   })
 }
 

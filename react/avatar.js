@@ -6,29 +6,26 @@ exports.run = (client, message, args) => {
   translate(react, {to: 'en'}).then(res => {
     switch (res.from.language.iso) {
       case 'ko':
-        var embed = new Discord.RichEmbed()
-          .setColor(4620980)
-          .setTitle(`${message.author.username}님의 프로필사진`)
-          .setImage(`${message.author.avatarURL}`)
-          .setURL(`${message.author.avatarURL}`)
-        message.channel.send({embed})
+        var embedTitle = '다음 사용자의 프로필사진: '
         break;
       default:
-        var embed = new Discord.RichEmbed()
-          .setColor(4620980)
-          .setTitle(`Avatar of ${message.author.username}`)
-          .setImage(`${message.author.avatarURL}`)
-          .setURL(`${message.author.avatarURL}`)
-        message.channel.send({embed})
+        var embedTitle = 'Avatar of '
         break;
     }
   })
+  var embed = new Discord.RichEmbed()
+    .setColor(4620980)
+    .setTitle(`${embedTitle}${message.author.username}`)
+    .setImage(`${message.author.avatarURL}`)
+    .setURL(`${message.author.avatarURL}`)
+  message.channel.send({embed})
+  break;
 }
 
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ['아바타'],
+  aliases: ['프로필사진'],
   permLevel: 0
 }
 
