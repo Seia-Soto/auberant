@@ -7,14 +7,14 @@ exports.run = (client, message, args) => {
   translate(react, {to: 'en'}).then(res => {
     switch (res.from.language.iso) {
       case 'ko':
-        let embedTitle = '아스키'
-        let informationContent = 'ASCii 문자열을 전송합니다. 인수는 영문 문자열입니다.'
-        let errorTitle = '오류'
+        var embedTitle = '아스키'
+        var informationContent = 'ASCii 문자열을 전송합니다. 인수는 영문 문자열입니다.'
+        var errorTitle = '오류'
         break;
       default:
-        let embedTitle = 'ascii'
-        let informationContent = 'Send ASCii artworks. Argument is string.'
-        let errorTitle = 'Error'
+        var embedTitle = 'ascii'
+        var informationContent = 'Send ASCii artworks. Argument is string.'
+        var errorTitle = 'Error'
         break;
     }
   })
