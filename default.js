@@ -35,5 +35,5 @@ client.elevation = (message, guild) => {
 
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 
-client.login(process.env.Discord_API)
-client.destroy().then(() => client.login(process.env.Discord_API))
+client.login("NDEwMTcwNzcyNTk5MDc4OTEz.DYVNHA.1txi0aKujAcGRB3xZxtq_s2bxsk")
+//client.destroy().then(() => client.login(process.env.Discord_API))

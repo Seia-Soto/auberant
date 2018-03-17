@@ -1,3 +1,4 @@
+const Discord = require('discord.js')
 const translate = require('google-translate-api')
 const int = require('../int.json')
 exports.run = (client, message, args) => {

@@ -1,99 +1,48 @@
-const Discord = require('discord.js')
-const translate = require('google-translate-api')
-const int = require('../int.json')
-exports.run = (client, message, args) => {
-  const react = message.content.split(' ')[0].slice(int.prefix.length)
-  translate(react, {to: 'en'}).then(res => {
-    switch (res.from.language.iso) {
-      case 'ko':
-        var embed = new Discord.RichEmbed()
-          .setTitle('Auberant를 사용 중에 무슨 문제가 있나요?')
-          .setAuthor('Auberant', `${int.avatar}`)
-          /*
-           * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-           */
-          .setColor(4620980)
-          .setDescription(`안녕하세요? Auberant를 사용해주셔서 감사합니다!\n${client.guilds.size}개의 서버들이 Auberant를 채택했으며 현재 200개 이상의 커밋을 기록했답니다!
-            \n[artwork-if 서버에 가입하고 Auberant 초대하기](https://discord.gg/YzBZNQq)`)
-          //.setFooter('FooterText', 'Image_URL')
-          .setImage('https://cdn.discordapp.com/attachments/383944646046253056/416347036758048772/let_art_is_new_Artwork.png')
-          .setThumbnail(`${int.avatar}`)
-          /*
-           * Takes a Date object, defaults to current date.
-           */
-          //.setTimestamp()
-          .setURL('https://discord.gg/rkqN6Be')
-          /*
-           * Inline fields may not display as inline if the thumbnail and/or image is too big.
-           */
-          .addField(`Auberant ${int.version.substring(0, 5)} 배포판 (${int.date})`, `Artwork-if ${int.version} 빌드 ${int.build}\nEqualise와 Tree가 2명의 기여자와 함께 개발했습니다!`, true)
-          /*
-           * Blank field, useful to create some space.
-           */
-          .addBlankField(true)
-          .addField('반응 (명령)',
-            `사용하면서 더 자세한 설명을 볼 수 있습니다. 접두사는 **;** (세미콜론)입니다.\n
-**도움말** 문서
-**프로필** 프로필사진 출력
-**노트** 메모장 열기
-**질의** Auberant 반응속도 얻기
-**번역** 문자열 번역
-**후이즈** ICANN Whois에서 도메인 정보 얻기
-**텍스트** ASCii art 출력`, true);
-
-          message.channel.send({embed})
-        break;
-      default:
-         var embed = new Discord.RichEmbed()
-          .setTitle('Is there a problem using Auberant?')
-          .setAuthor('Auberant', `${int.avatar}`)
-          /*
-           * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-           */
-          .setColor(4620980)
-          .setDescription(`Hi, there? Thank you for using Auberant!\n${client.guilds.size} servers have adopted Auberant. And recorded over 200 commits!`)
-          //.setFooter('FooterText', 'Image_URL')
-          .setImage('https://cdn.discordapp.com/attachments/383944646046253056/416347036758048772/let_art_is_new_Artwork.png')
-          .setThumbnail(`${int.avatar}`)
-          /*
-           * Takes a Date object, defaults to current date.
-           */
-          //.setTimestamp()
-          .setURL('https://discord.gg/YzBZNQq')
-          /*
-           * Inline fields may not display as inline if the thumbnail and/or image is too big.
-           */
-          .addField(`Auberant ${int.version.substring(0, 5)} distributions (${int.date})`, `Artwork-if ${int.version} build ${int.build}\nDeveloped by Equalise, Tree with 2 contributors!
-            \n[Goto artwork-if server and invite Auberant!](https://discord.gg/YzBZNQq)`, true)
-          /*
-           * Blank field, useful to create some space.
-           */
-          .addBlankField(true)
-          .addField('Reacts (commands)',
-            `You can get additional help with using commands. And the prefix is **;**\n
-**help** documentation
-**avatar** get your avatar
-**note** open notepad
-**ping** get Auberant's respones-time
-**translate** translate string
-**whois** load domain information from ICANN Whois
-**text** out ASCii art`, true);
-
-          message.channel.send({embed})
-        break;
-    }
-  })
+exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
+  let messageTitle = `Help`
+  let messageDescription = `**Thank you for using Auberant!**\n
+Auberant is the [open-source project](https://github.com/artwork-if/auberant) of Artwork-IF.
+Let made Auberant with LuminescentLight and there are 2 contributors.\n
+Open-distribution: ${int.version}
+Here you are! If you need [Auberant for your server](https://discordapp.com/api/oauth2/authorize?client_id=410170772599078913&permissions=8&scope=bot) or [link of support server](https://discord.gg/YzBZNQq)!\n
+**1. Ascii** - send ascii artwork
+**2. Avatar** - send link of your avatar
+**3. help** - send Auberant's help documentation
+**Other commands are on maintences! Wait for moments. You can execute each commands to get more informations.**
+`
+  let errorTitle = `Error`
+  switch (requestLanguage) {
+    case `ko`:
+      messageTitle = `도움말`
+      messageDescription = `**Auberant를 사용해주셔서 감사합니다!**\n
+Auberant는 Artwork-IF [오픈소스 프로젝트](https://github.com/artwork-if/auberant)입니다.
+Let은 LuminescentLight 외 2명의 기여자와 함께 만들었습니다.\n
+커뮤니티 배포버전: ${int.version}
+만약 [당신의 서버를 위한 Auberant](https://discordapp.com/api/oauth2/authorize?client_id=410170772599078913&permissions=8&scope=bot)가 필요하시거나 [지원 서버의 주소](https://discord.gg/YzBZNQq)가 필요하신가요?\n
+**1. 아스키** - 아스키 삽화를 출력합니다
+**2. 프로필사진** - 프로필사진의 주소를 출력합니다
+**3. 도움말** - Auberant의 도움말을 출력합니다
+**다른 명령어는 현재 수리 중에 있습니다. 각 명령어를 실행함으로서 더욱 자세한 정보를 얻을 수 있습니다.**
+`
+      errorTitle = `오류`
+      break;
+  }
+  message.channel.send({embed: {
+    color: 4620980,
+    title: `${messageTitle}`,
+    description: `${messageDescription}`
+  }})
 }
 
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ['도움말'],
+  aliases: [`도움말`],
   permLevel: 0
 }
 
 exports.help = {
-  name: 'help',
-  description: 'Get documentation.',
-  usage: 'help'
+  name: `help`,
+  description: `Open help documente of Auberant.`,
+  usage: `help`
 }

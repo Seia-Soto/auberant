@@ -1,35 +1,30 @@
-const Discord = require('discord.js')
-const translate = require('google-translate-api')
-const int = require('../int.json')
-exports.run = (client, message, args) => {
-  const react = message.content.split(' ')[0].slice(int.prefix.length)
-  translate(react, {to: 'en'}).then(res => {
-    switch (res.from.language.iso) {
-      case 'ko':
-        var messageTitle = '다음 사용자의 프로필사진: '
-        break;
-      default:
-        var messageTitle = 'Avatar of '
-        break;
-    }
-    var message = new Discord.RichEmbed()
-      .setColor(4620980)
-      .setTitle(`${messageTitle}${message.author.username}`)
-      .setImage(`${message.author.avatarURL}`)
-      .setURL(`${message.author.avatarURL}`)
-    message.channel.send({message})
-  })
+exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
+  let messageTitle = `Avatar`
+  let messageDescription = `Avatar of ${message.author.tag}`
+  let errorTitle = `Error`
+  switch (requestLanguage) {
+    case `ko`:
+      messageTitle = `프로필사진`
+      messageDescription = `${message.author.tag}님의 프로필사진`
+      errorTitle = `오류`
+      break;
+  }
+  message.channel.send({embed: {
+    color: 4620980,
+    title: `${messageTitle}`,
+    description: `${messageDescription}\n${message.author.avatarURL}`
+  }})
 }
 
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ['프로필사진'],
+  aliases: [`프로필사진`],
   permLevel: 0
 }
 
 exports.help = {
-  name: 'avatar',
-  description: 'Get avatar of user.',
-  usage: 'avatar'
+  name: `avatar`,
+  description: `Get avatar url of message author.`,
+  usage: `avatar`
 }

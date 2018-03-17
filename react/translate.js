@@ -1,3 +1,4 @@
+const Discord = require('discord.js')
 const translate = require('google-translate-api')
 const braille = require('braille')
 const int = require('../int.json')

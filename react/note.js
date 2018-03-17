@@ -1,6 +1,7 @@
 const Enmap = require('enmap')
 const EnmapLevel = require('enmap-level')
 const Notes = new Enmap({ provider: new EnmapLevel({ name: 'note' }) })
+const Discord = require('discord.js')
 const translate = require('google-translate-api')
 const int = require('../int.json')
 exports.run = (client, message, args) => {

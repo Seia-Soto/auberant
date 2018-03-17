@@ -7,17 +7,20 @@ module.exports = message => {
 
   let react = message.content.split(' ')[0].slice(int.prefix.length)
   let args = message.content.split(' ').slice(1)
+  let arg = args.slice(0).join(' ')
   let perms = client.elevation(message)
-  translate(react, {to: 'en'}).then(res => { let requestLanguage = res.from.language.iso })
-  let rct
+  translate(react, {to: 'en'}).then(res => {
+    let requestLanguage = res.from.language.iso
 
-  if (client.reacts.has(react)) {
-    rct = client.reacts.get(react)
-  } else if (client.aliases.has(react)) {
-    rct = client.reacts.get(client.aliases.get(react))
-  }
-  if (rct) {
-    if (perms < rct.conf.permLevel) return
-    rct.run(client, message, args, perms, requestLanguage)
-  }
+    let rct
+    if (client.reacts.has(react)) {
+      rct = client.reacts.get(react)
+    } else if (client.aliases.has(react)) {
+      rct = client.reacts.get(client.aliases.get(react))
+    }
+    if (rct) {
+      if (perms < rct.conf.permLevel) return
+      rct.run(client, message, int, args, arg, perms, requestLanguage)
+    }
+  })
 }
