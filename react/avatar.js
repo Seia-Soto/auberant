@@ -6,19 +6,19 @@ exports.run = (client, message, args) => {
   translate(react, {to: 'en'}).then(res => {
     switch (res.from.language.iso) {
       case 'ko':
-        var embedTitle = '다음 사용자의 프로필사진: '
+        var messageTitle = '다음 사용자의 프로필사진: '
         break;
       default:
-        var embedTitle = 'Avatar of '
+        var messageTitle = 'Avatar of '
         break;
     }
+    var message = new Discord.RichEmbed()
+      .setColor(4620980)
+      .setTitle(`${messageTitle}${message.author.username}`)
+      .setImage(`${message.author.avatarURL}`)
+      .setURL(`${message.author.avatarURL}`)
+    message.channel.send({message})
   })
-  var embed = new Discord.RichEmbed()
-    .setColor(4620980)
-    .setTitle(`${embedTitle}${message.author.username}`)
-    .setImage(`${message.author.avatarURL}`)
-    .setURL(`${message.author.avatarURL}`)
-  message.channel.send({embed})
 }
 
 exports.conf = {

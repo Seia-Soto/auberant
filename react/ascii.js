@@ -1,4 +1,5 @@
 const figlet = require('figlet')
+const Discord = require('discord.js')
 const translate = require('google-translate-api')
 const int = require('../int.json')
 exports.run = (client, message, args) => {
@@ -8,35 +9,35 @@ exports.run = (client, message, args) => {
     switch (res.from.language.iso) {
       case 'ko':
         var messageTitle = '아스키'
-        var messageContent = 'ASCii 문자열을 전송합니다. 인수는 영문 문자열입니다.'
+        var messageDescription = 'ASCii 문자열을 전송합니다. 인수는 영문 문자열입니다.'
         var errorTitle = '오류'
         break;
       default:
         var messageTitle = 'ascii'
-        var messageContent = 'Send ASCii artworks. Argument is string.'
+        var messageDescription = 'Send ASCii artworks. Argument is string.'
         var errorTitle = 'Error'
         break;
     }
-  })
-  if (!args[0]) {
-    message.channel.send({embed: {
-      color: 4620980,
-      title: `${messageTitle}`,
-      description: `${messageContent}`
-    }})
-    return
-  }
-  figlet.text(`${messageToASCii}`, (error, data) => {
-    if (error) {
-      console.error(error)
-      message.channel.send({embed: {
-        color: 4620980,
-        title: `${errorTitle}`,
-        description: `${error}`
-      }})
+    if (!args[0]) {
+      var message = new Discord.RichEmbed()
+        .setColor(4620980)
+        .setTitle(`${messageTitle}`)
+        .setDescription(`${messageDescription}`)
+      message.channel.send({message})
       return
     }
-    message.channel.send('```' + data + '```')
+    figlet.text(`${messageToASCii}`, (error, data) => {
+      if (error) {
+        console.error(error)
+        var message = new Discord.RichEmbed()
+          .setColor(4620980)
+          .setTitle(`${messageTitle}`)
+          .setDescription(`${messageDescription}`)
+        message.channel.send({message})
+        return
+      }
+      message.channel.send('```' + data + '```')
+    })
   })
 }
 
