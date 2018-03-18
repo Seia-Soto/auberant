@@ -28,7 +28,7 @@ exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
       }})
       return
     }
-    message.channel.send(````` + data + `````)
+    message.channel.send(``` + data + ```)
   })
 }
 
