@@ -1,0 +1,46 @@
+{
+  "name": "auberant",
+  "version": "1.2.1",
+  "description": "None Discord",
+  "main": "default.js",
+  "author": "Equalise with Tree",
+  "license": "MIT",
+  "dependencies": {
+    "braille": "^1.1.0",
+    "build-tools": "^7.2.4",
+    "dblapi.js": "^1.1.0",
+    "debug": "^3.1.0",
+    "discord.js": "^11.3.0",
+    "enmap": "^0.4.2",
+    "enmap-level": "^1.0.0",
+    "figlet": "^1.2.0",
+    "fs": "0.0.1-security",
+    "google-assistant": "^0.2.2",
+    "google-translate-api": "^2.3.0",
+    "opusscript": "0.0.6",
+    "whois": "^2.5.9",
+    "wikijs": "^4.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node default",
+    "start": "node default"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artwork-if/auberant.git"
+  },
+  "keywords": [
+    "Auberant",
+    "Equailse",
+    "LuminescentLight",
+    "Discord",
+    "Bot",
+    "Translate",
+    "BigText"
+  ],
+  "bugs": {
+    "url": "https://github.com/artwork-if/auberant/issues"
+  },
+  "homepage": "https://auberant.tk"
+}
