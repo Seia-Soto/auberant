@@ -11,7 +11,6 @@ module.exports = message => {
   let perms = client.elevation(message)
   translate(react, {to: 'en'}).then(res => {
     let requestLanguage = res.from.language.iso
-
     let rct
     if (client.reacts.has(react)) {
       rct = client.reacts.get(react)

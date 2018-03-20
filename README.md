@@ -9,8 +9,7 @@
 [Support server](https://discord.gg/YzBZNQq) ``YzBZNQq``
 </br>
 [Website](https://artwork-if.tk) ``https://artwork-if.tk``
-</br>
-[Slack](https://join.slack.com/t/artwork-if/shared_invite/enQtMzMyNTc4MjY0Njc4LTE0NTI1ZDFiMTBlMDNmNzZkMTdlMWQ1MjEwNDU0NGJjZDc5Mzg2ZmRmZTA3MTJmNWJlMDljZjBkYzhkNzEzYTQ) ``artwork-if.slack.com``
+
 </br>
 </br>
 
