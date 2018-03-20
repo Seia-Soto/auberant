@@ -20,7 +20,7 @@ exports.conf = {
   enabled: true,
   guildOnly: true,
   aliases: [`테스트`],
-  permLevel: 0
+  permLevel: 11
 }
 
 exports.help = {
