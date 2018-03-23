@@ -1,40 +1,28 @@
-const Discord = require('discord.js')
-const translate = require('google-translate-api')
-const int = require('../int.json')
-exports.run = (client, message, args) => {
-  const react = message.content.split(' ')[0].slice(int.prefix.length)
-  translate(react, {to: 'en'}).then(res => {
-    switch (res.from.language.iso) {
-      case 'ko':
-        message.channel.send({embed: {
-          color: 4620980,
-          title: '질의',
-          description: '요청 중..'
-        }}).then((ping) => {
-          ping.edit({embed: {
-            color: 4620980,
-            title: '질의',
-            description: `요청이 반환되었습니다! ${ping.createdTimestamp - message.createdTimestamp}ms가 소요되었습니다.`
-          }})
-        })
-        .catch(console.error)
-        break;
-      default:
-        message.channel.send({embed: {
-          color: 4620980,
-          title: 'ping',
-          description: 'Pinging..'
-        }}).then((ping) => {
-          ping.edit({embed: {
-            color: 4620980,
-            title: 'ping',
-            description: `Pong! Took ${ping.createdTimestamp - message.createdTimestamp}ms.`
-          }})
-        })
-        .catch(console.error)
-        break;
-    }
+exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
+  let messageTitle = `Ping`
+  let messageDescription_pinging = `Pinging..`
+  let messageDescription = `Pong! Took ${ping.createdTimestamp - message.createdTimestamp}ms.`
+  let errorTitle = `Error`
+  switch (requestLanguage) {
+    case `ko`:
+      messageTitle = `질의`
+      messageDescription_pinging = `요청 중..`
+      messageDescription = `요청이 반환되었습니다! ${ping.createdTimestamp - message.createdTimestamp}ms가 소요되었습니다.`
+      errorTitle = `오류`
+      break;
+  }
+  message.channel.send({embed: {
+    color: 4620980,
+    title: `${messageTitle}`,
+    description: `${messageDescription_pinging}`
+  }}).then((ping) => {
+    ping.edit({embed: {
+      color: 4620980,
+      title: `${messageTitle}`,
+      description: `${messageDescription}`
+    }})
   })
+  .catch(console.error)
 }
 
 exports.conf = {
