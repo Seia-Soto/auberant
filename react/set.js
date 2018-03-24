@@ -20,12 +20,12 @@ exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['settings'],
+  aliases: [],
   permLevel: 3
 }
 
 exports.help = {
-  name: 'set',
-  description: 'Bot configuration tool.',
-  usage: 'set <topic> <value>'
+  name: `set`,
+  description: `Bot configuration tool.`,
+  usage: `set <topic> <value>`
 }

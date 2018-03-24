@@ -1,4 +1,4 @@
-const Enmap = require('enmap')
+`const Enmap = require('enmap')
 const EnmapLevel = require('enmap-level')
 const Notes = new Enmap({ provider: new EnmapLevel({ name: 'note' }) })
 exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
@@ -70,12 +70,12 @@ exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ['노트'],
+  aliases: [`노트`],
   permLevel: 0
 }
 
 exports.help = {
-  name: 'note',
-  description: 'Take notes on Auberant :P',
-  usage: 'note <content>'
+  name: `note`,
+  description: `Take notes on Auberant :P`,
+  usage: `note <content>`
 }

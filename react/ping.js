@@ -29,12 +29,12 @@ exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ['질의'],
+  aliases: [`질의`],
   permLevel: 0
 }
 
 exports.help = {
-  name: 'ping',
-  description: 'Load Auberant API respones time.',
-  usage: 'ping'
+  name: `ping`,
+  description: `Load Auberant API respones time.`,
+  usage: `ping`
 }
