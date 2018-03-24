@@ -9,6 +9,8 @@ Here you are! If you need [Auberant for your server](https://discordapp.com/api/
 **1. Ascii** - send ascii artwork
 **2. Help** - send Auberant's help documentation
 **3. Note** - write and save it to Auberant
+**4. Ping** - get api respones delay time
+**5. Say** - Auberant will respones with your argument
 **Other commands are on maintences! Wait for moments. You can execute each commands to get more informations.**
 `
   let errorTitle = `Error`
@@ -23,6 +25,8 @@ Let은 Auberant를 LuminescentLight 외 2명의 기여자와 함께 만들었습
 **1. 아스키** - 아스키 삽화를 출력합니다
 **2. 도움말** - Auberant의 도움말을 출력합니다
 **3. 노트** - 작성 후 Auberant에 저장합니다
+**4. 질의** - API 응답시간을 측정합니다
+**5. 말하기** - Auberant가 당신의 인수와 함께 응답할 것입니다
 **다른 명령어는 현재 수리 중에 있습니다. 각 명령어를 실행함으로서 더욱 자세한 정보를 얻을 수 있습니다.**
 `
       errorTitle = `오류`
