@@ -22,16 +22,23 @@ exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
       errorTitle = `오류`
       break;
   }
+  if (!args[0] || !args[1]) {
+    message.channel.send({embed: {
+      color: 4620980,
+      title: `${messageTitle}`,
+      description: `${messageDescription}`
+    }})
+    return
+  }
   switch (args[0]) {
+    case `${_text}`:
+      message.channel.send({embed: {
+        color: 4620980,
+        title: `${messageTitle}`,
+        description: `**braille** to **text**\n${_totext}`
+      }})
+      break;
     case `${_braille}`:
-      if (!args[1]) {
-        message.channel.send({embed: {
-          color: 4620980,
-          title: `${messageTitle}`,
-          description: `${messageDescription}`
-        }})
-        return
-      }
       message.channel.send({embed: {
         color: 4620980,
         title: `${messageTitle}`,
@@ -39,14 +46,6 @@ exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
       }})
       break;
     default:
-      if (!args[0] || !args[1]) {
-        message.channel.send({embed: {
-          color: 4620980,
-          title: `${messageTitle}`,
-          description: `${messageDescription}`
-        }})
-        return
-      }
       translate(_todo, {to: `${args[0]}`}).then(res => {
         message.channel.send({embed: {
           color: 4620980,
