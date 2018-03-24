@@ -4,14 +4,13 @@
    "prefix": ";",
 
    "name": "auberant",
-   "version": "1.2.1.54.345",
-   "build": "213",
-   "date": "2018-02-24",
+   "version": "1.2.1.57",
+   "build": "263",
+   "date": "2018-03-24",
    "avatar": "https://cdn.discordapp.com/avatars/410170772599078913/fa88fb40b477af23ec930e7546851ed3.png?size=2048",
    "activity": "https://artwork-if.tk",
    "permissions": "8",
 
     "ownerid": "324541397988409355",
-    "moderator_roleame": "Moderator",
-    "administrator_rolename": "Administrator"
+    "moderator_roleame": "Moderator"
  }
