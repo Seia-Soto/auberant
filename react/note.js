@@ -3,7 +3,7 @@ const EnmapLevel = require('enmap-level')
 const Notes = new Enmap({ provider: new EnmapLevel({ name: 'note' }) })
 exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
   let messageTitle = `Note`
-  let messageDescription = `Take notes on Auberant. Just try: ``;note new <content>``. And open it with ``;note open <ID>``.\n\nA note can disappear when Auberant get new update. Do not keep your password or private thing on Auberant. We are not responsible for any leaked personal information or deleted notes. :P`
+  let messageDescription = `Take notes on Auberant. Just try: \`\`;note new <content>\`\`. And open it with \`\`;note open <ID>\`\`.\n\nA note can disappear when Auberant get new update. Do not keep your password or private thing on Auberant. We are not responsible for any leaked personal information or deleted notes. :P`
   let messageDescription_nocontent = `Can't find any content to save.`
   let messageDescription_saved = `Now you can find your note by using **;note open ${_id}**.`
   let messageDescription_noid = `Can't interpret id to open.`
