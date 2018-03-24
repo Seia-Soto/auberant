@@ -3,7 +3,7 @@ exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
   switch(args[0]) {
     case 'activity':
       client.user.setActivity(`${setValueTo}`)
-      console.log(`Client user's activity setted to **${setValueTo}**.`)
+      console.log(`Client user's activity setted to ${setValueTo}.`)
       message.reply(`Client user's activity setted to **${setValueTo}**.`)
       break;
     case 'restart':
