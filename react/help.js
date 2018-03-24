@@ -18,7 +18,7 @@ Here you are! If you need [Auberant for your server](https://discordapp.com/api/
     case `ko`:
       messageTitle = `도움말`
       messageDescription = `**Auberant를 사용해주셔서 감사합니다!**\n
-Auberant는 Artwork-IF [오픈소스 프로젝트](https://github.com/artwork-if/auberant)입니다.
+Auberant는 Artwork-IF의 [오픈소스 프로젝트](https://github.com/artwork-if/auberant)입니다.
 Let은 Auberant를 LuminescentLight 외 2명의 기여자와 함께 만들었습니다.\n
 커뮤니티 배포버전: ${int.version}-${int.build} 빌드 (${int.date})
 만약 [당신의 서버를 위한 Auberant](https://discordapp.com/api/oauth2/authorize?client_id=410170772599078913&permissions=8&scope=bot)가 필요하시거나 [지원 서버의 주소](https://discord.gg/YzBZNQq)가 필요하신가요?\n
@@ -31,6 +31,11 @@ Let은 Auberant를 LuminescentLight 외 2명의 기여자와 함께 만들었습
 `
       errorTitle = `오류`
       break;
+    case 'zh-chs':
+      messageTitle = `提示`
+      messageDescription = `**谢谢使用Auberant!**\n
+Auberant是 Artwork-IF的[开放源代码 事业](https://github.com/artwork-if/auberant)。`
+      break;
   }
   message.channel.send({embed: {
     color: 4620980,
@@ -42,7 +47,7 @@ Let은 Auberant를 LuminescentLight 외 2명의 기여자와 함께 만들었습
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: [`도움말`],
+  aliases: [`도움말`, '提示'],
   permLevel: 0,
   name: `help`
 }

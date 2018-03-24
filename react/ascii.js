@@ -1,7 +1,7 @@
 const figlet = require(`figlet`)
 exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
   // messageDescriptions
-  let messageTitle = `ascii`
+  let messageTitle = `Ascii`
   let messageDescription = `Send ASCii artworks. Argument is string.`
   let errorTitle = `Error`
   switch (requestLanguage) {
@@ -9,6 +9,11 @@ exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
       messageTitle = `아스키`
       messageDescription = `ASCii 문자열을 전송합니다. 인수는 영문 문자열입니다.`
       errorTitle = `오류`
+      break;
+    case 'zh-chs':
+      messageTitle = `Ascii`
+      messageDescription = `发送ASCil字符串. 参数是英语字符串.`
+      errorTitle = `错误`
       break;
   }
   if (!args[0]) {
