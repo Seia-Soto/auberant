@@ -17,7 +17,7 @@ fs.readdir('./react/', (error, reactFiles) => {
     let props = require(`./react/${reactFiles}`)
     console.log(`Loading react: ${props.conf.name}.`)
     client.reacts.set(props.conf.name, props)
-    props.help.aliases.forEach(alias => {
+    props.conf.aliases.forEach(alias => {
       client.aliases.set(alias, props.conf.name)
     })
   })
