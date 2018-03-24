@@ -37,11 +37,6 @@ exports.conf = {
   enabled: true,
   guildOnly: true,
   aliases: [`아스키`],
-  permLevel: 0
-}
-
-exports.help = {
-  name: `ascii`,
-  description: `Print text to ascii artwork.`,
-  usage: `ascii <word>`
+  permLevel: 0,
+  name: `ascii`
 }

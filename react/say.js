@@ -17,11 +17,6 @@ exports.conf = {
   enabled: true,
   guildOnly: true,
   aliases: [`말하기`],
-  permLevel: 11
-}
-
-exports.help = {
-  name: `say`,
-  description: `test`,
-  usage: `say <flag> <message>`
+  permLevel: 0,
+  name: `say`
 }

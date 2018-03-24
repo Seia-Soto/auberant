@@ -21,11 +21,6 @@ exports.conf = {
   enabled: true,
   guildOnly: true,
   aliases: [`테스트`],
-  permLevel: 11
-}
-
-exports.help = {
-  name: `test`,
-  description: `test`,
-  usage: `test`
+  permLevel: 11,
+  name: `test`
 }

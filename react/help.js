@@ -43,11 +43,6 @@ exports.conf = {
   enabled: true,
   guildOnly: true,
   aliases: [`도움말`],
-  permLevel: 0
-}
-
-exports.help = {
-  name: `help`,
-  description: `Open help documente of Auberant.`,
-  usage: `help`
+  permLevel: 0,
+  name: `help`
 }

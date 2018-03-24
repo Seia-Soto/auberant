@@ -30,11 +30,6 @@ exports.conf = {
   enabled: true,
   guildOnly: true,
   aliases: [`질의`],
-  permLevel: 0
-}
-
-exports.help = {
-  name: `ping`,
-  description: `Load Auberant API respones time.`,
-  usage: `ping`
+  permLevel: 0,
+  name: `ping`
 }

@@ -21,11 +21,6 @@ exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: [],
-  permLevel: 3
-}
-
-exports.help = {
-  name: `set`,
-  description: `Bot configuration tool.`,
-  usage: `set <topic> <value>`
+  permLevel: 3,
+  name: `set`
 }

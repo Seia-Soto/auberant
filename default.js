@@ -15,10 +15,10 @@ fs.readdir('./react/', (error, reactFiles) => {
   console.log(`Loading a total of ${reactFiles.length} reacts.`)
   reactFiles.forEach(reactFiles => {
     let props = require(`./react/${reactFiles}`)
-    console.log(`Loading react: ${props.help.name}.`)
+    console.log(`Loading react: ${props.conf.name}.`)
     client.reacts.set(props.help.name, props)
     props.conf.aliases.forEach(alias => {
-      client.aliases.set(alias, props.help.name)
+      client.aliases.set(alias, props.conf.name)
     })
   })
 })

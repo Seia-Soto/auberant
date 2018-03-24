@@ -103,11 +103,6 @@ exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: ['번역'],
-  permLevel: 0
-}
-
-exports.help = {
-  name: 'translate',
-  description: 'Translate in Discord anytime when you want.',
-  usage: 'translate <languagecode> <string>'
+  permLevel: 0,
+  name: `translate`
 }

@@ -71,11 +71,6 @@ exports.conf = {
   enabled: true,
   guildOnly: true,
   aliases: [`노트`],
-  permLevel: 0
-}
-
-exports.help = {
-  name: `note`,
-  description: `Take notes on Auberant :P`,
-  usage: `note <content>`
+  permLevel: 0,
+  name: `note`
 }
