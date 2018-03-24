@@ -10,11 +10,21 @@ exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
       errorTitle = `오류`
       break;
   }
-  message.channel.send({embed: {
-    color: 4620980,
-    title: `${messageTitle}`,
-    description: `${messageDescription}`
-  }})
+  if (!arg) {
+    message.channel.send({embed: {
+      color: 4620980,
+      title: `${messageTitle}`,
+      description: `${messageDescription}`
+    }})
+  } else {
+    whois.lookup(`${arg}`, (error, data) => {
+      message.channel.send({embed: {
+        color: 4620980,
+        title: `${messageTitle}`,
+        description: `${data.substring(0, 2000)}`
+      }})
+    })
+  }
 }
 
 exports.conf = {
