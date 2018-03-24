@@ -1,5 +1,6 @@
 const figlet = require(`figlet`)
 exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
+  // messageDescriptions
   let messageTitle = `ascii`
   let messageDescription = `Send ASCii artworks. Argument is string.`
   let errorTitle = `Error`

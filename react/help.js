@@ -1,4 +1,5 @@
 exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
+  // messageDescriptions
   let messageTitle = `Help`
   let messageDescription = `**Thank you for using Auberant!**\n
 Auberant is the [open-source project](https://github.com/artwork-if/auberant) of Artwork-IF.

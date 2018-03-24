@@ -1,4 +1,5 @@
 exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
+  // messageDescriptions
   let messageTitle = `Ping`
   let messageDescription_pinging = `Pinging..`
   let messageDescription = `Pong! Took ${ping.createdTimestamp - message.createdTimestamp}ms.`

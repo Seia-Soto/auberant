@@ -1,4 +1,5 @@
 exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
+  // messageDescriptions
   let messageTitle = `Test`
   let messageDescription = `Executes test command.`
   let errorTitle = `Error`
