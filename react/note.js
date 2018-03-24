@@ -54,7 +54,7 @@ exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
       message.channel.send({embed: {
         color: 4620980,
         title: `${messageTitle}`,
-        description: `${Notes.open(`${args[1]}`)}`
+        description: `${Notes.open(args[1])}`
       }})
       break;
     default:
