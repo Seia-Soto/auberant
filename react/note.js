@@ -55,7 +55,7 @@ exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
       message.channel.send({embed: {
         color: 4620980,
         title: `${messageTitle}`,
-        description: `${opened}`
+        description: `${_opened}`
       }})
       break;
     default:
