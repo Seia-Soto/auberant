@@ -1,4 +1,4 @@
-`const Enmap = require('enmap')
+const Enmap = require('enmap')
 const EnmapLevel = require('enmap-level')
 const Notes = new Enmap({ provider: new EnmapLevel({ name: 'note' }) })
 exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
