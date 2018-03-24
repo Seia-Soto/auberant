@@ -1,6 +1,6 @@
 const Enmap = require('enmap')
-const EnmapLevel = require('enmap-level')
-const Notes = new Enmap({ provider: new EnmapLevel({ name: 'note' }) })
+const EnmapLevel = require('enmap-sqlite')
+const Notes = new Enmap({ provider: new EnmapSQLite({ name: 'note' }) })
 exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
   // Various
   let _id = Math.floor(Math.random() * 9999) + 1
