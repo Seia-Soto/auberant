@@ -4,6 +4,7 @@ const Notes = new Enmap({ provider: new EnmapLevel({ name: 'note' }) })
 exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
   // Various
   let _id = Math.floor(Math.random() * 9999) + 1
+  let _opened = Notes.open(`${args[1]}`)
   // messageDescriptions
   let messageTitle = `Note`
   let messageDescription = `Take notes on Auberant. Just try: \`\`;note new <content>\`\`. And open it with \`\`;note open <ID>\`\`.\n\nA note can disappear when Auberant get new update. Do not keep your password or private thing on Auberant. We are not responsible for any leaked personal information or deleted notes. :P`
@@ -54,17 +55,14 @@ exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
       message.channel.send({embed: {
         color: 4620980,
         title: `${messageTitle}`,
-        description: `${Notes.open(args[1])}`
+        description: `${opened}`
       }})
       break;
     default:
       message.channel.send({embed: {
         color: 4620980,
         title: `${messageTitle}`,
-        description: `${messageDescription}`,
-        footer: {
-          text: `#${args[1]}`
-        }
+        description: `${messageDescription}`
       }})
   }
 }
