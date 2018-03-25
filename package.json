@@ -15,7 +15,6 @@
     "enmap-sqlite": "^2.0.0",
     "figlet": "^1.2.0",
     "fs": "0.0.1-security",
-    "google": "^2.1.0",
     "google-assistant": "^0.2.2",
     "google-translate-api": "^2.3.0",
     "opusscript": "0.0.6",
