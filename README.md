@@ -1,4 +1,5 @@
-### Translate in Discord anywhere when you want!
+### This is the last version of Auberant and we are going to rewrite a new one for new and better experiences!
+This version's support was not ended but support will end soon.
 # Auberant
 * * *
 
