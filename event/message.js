@@ -2,15 +2,15 @@ const translate = require('google-translate-api')
 const int = require('../int.json')
 module.exports = message => {
   if (message.author.bot) return
-  let client = message.client
+  const client = message.client
   if (!message.content.startsWith(int.prefix)) return
 
-  let react = message.content.split(' ')[0].slice(int.prefix.length)
-  let args = message.content.split(' ').slice(1)
-  let arg = args.slice(0).join(' ')
-  let perms = client.elevation(message)
+  const react = message.content.split(' ')[0].slice(int.prefix.length)
+  const args = message.content.split(' ').slice(1)
+  const arg = args.slice(0).join(' ')
+  const perms = client.elevation(message)
   translate(react, {to: 'en'}).then(res => {
-    let requestLanguage = res.from.language.iso
+    const requestLanguage = res.from.language.iso
     let rct
     if (client.reacts.has(react)) {
       rct = client.reacts.get(react)
