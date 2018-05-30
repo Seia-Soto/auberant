@@ -9,7 +9,7 @@ This version's support was not ended but support will end soon.
 #### Is there any issues with **Auberant**?
 [Support server](https://discord.gg/YzBZNQq) ``YzBZNQq``
 </br>
-[Website](https://artwork-if.tk) ``https://artwork-if.tk``
+[Website](https://seriumium.tk) ``Site has been moved to seriumium.tk``
 
 </br>
 </br>
@@ -69,7 +69,11 @@ Load your profile picture!
 
 #### Updates
 * * *
-``1.2.1`` __Distributed__
+``1.2.2`` __Updating__
+```md
+- Updating some elements
+```
+``1.2.1`` __Deprecated__
 ```md
 - Structure updated
 - Named Auberant
