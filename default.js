@@ -33,7 +33,5 @@ client.elevation = (message, guild) => {
   return permlvl
 }
 
-var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
-
 client.login(process.env.Discord_API)
 client.destroy().then(() => client.login(process.env.Discord_API))
