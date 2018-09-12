@@ -2,13 +2,13 @@ exports.run = (client, message, int, args, arg, perms, requestLanguage) => {
   // messageDescriptions
   let messageTitle = `Ping`
   let messageDescription_pinging = `Pinging..`
-  let messageDescription = `Pong! Took ${ping.createdTimestamp - message.createdTimestamp}ms.`
+  let messageDescription = `Pong! Took ${ping.createdTimestamp - message.createdTimestamp}ms. (SoC: ${client.ping}ms)`
   let errorTitle = `Error`
   switch (requestLanguage) {
     case `ko`:
       messageTitle = `질의`
       messageDescription_pinging = `요청 중..`
-      messageDescription = `요청이 반환되었습니다! ${ping.createdTimestamp - message.createdTimestamp}ms가 소요되었습니다.`
+      messageDescription = `요청이 반환되었습니다! ${ping.createdTimestamp - message.createdTimestamp}ms가 소요되었습니다. (SoC: ${client.ping}ms)`
       errorTitle = `오류`
       break;
   }
